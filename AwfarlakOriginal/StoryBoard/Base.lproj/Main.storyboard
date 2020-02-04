@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Awfarlak View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AwfarlakViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awfarlak" translatesAutoresizingMaskIntoConstraints="NO" id="nOg-8r-Rwk">
+                                <rect key="frame" x="-62" y="0.0" width="538" height="537.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nOg-8r-Rwk" secondAttribute="height" multiplier="1:1" id="DoB-hT-xLL"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMM-Dm-5Do">
+                                <rect key="frame" x="0.0" y="537.5" width="414" height="358.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEC-og-aMc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="8gL-9L-Q04">
+                                                <rect key="frame" x="30" y="122.5" width="354" height="114"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-5W-Ot6" customClass="CusstomButton" customModule="AwfarlakOriginal" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                                        <color key="backgroundColor" name="BtnColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="iX1-ui-Ffk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <state key="normal" title="Log In">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="logInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHe-F8-y8R"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-ba-Pzj" customClass="CusstomButton" customModule="AwfarlakOriginal" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="74" width="354" height="40"/>
+                                                        <color key="backgroundColor" name="BtnColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <state key="normal" title="Create Account">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="createAccountBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMV-Mk-sV6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8gL-9L-Q04" firstAttribute="centerX" secondItem="oEC-og-aMc" secondAttribute="centerX" id="1Xd-mF-9QF"/>
+                                            <constraint firstItem="8gL-9L-Q04" firstAttribute="centerY" secondItem="oEC-og-aMc" secondAttribute="centerY" id="IaY-cb-FsS"/>
+                                            <constraint firstItem="8gL-9L-Q04" firstAttribute="leading" secondItem="oEC-og-aMc" secondAttribute="leading" constant="30" id="RLS-UV-wLr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oEC-og-aMc" firstAttribute="top" secondItem="JMM-Dm-5Do" secondAttribute="top" id="40I-F3-RfW"/>
+                                    <constraint firstItem="oEC-og-aMc" firstAttribute="leading" secondItem="JMM-Dm-5Do" secondAttribute="leading" id="S6e-7T-cdD"/>
+                                    <constraint firstAttribute="bottom" secondItem="oEC-og-aMc" secondAttribute="bottom" id="UxJ-vA-p36"/>
+                                    <constraint firstAttribute="trailing" secondItem="oEC-og-aMc" secondAttribute="trailing" id="maE-iH-Sac"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKb-I7-CdJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-KW-DHQ">
+                                        <rect key="frame" x="87" y="205" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="JNx-Uu-GYz"/>
+                                            <constraint firstAttribute="width" constant="240" id="mDX-j1-jlb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6Pd-KW-DHQ" firstAttribute="centerY" secondItem="eKb-I7-CdJ" secondAttribute="centerY" id="Nkt-Wm-u1i"/>
+                                    <constraint firstItem="6Pd-KW-DHQ" firstAttribute="centerX" secondItem="eKb-I7-CdJ" secondAttribute="centerX" id="oxN-S9-wON"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="JMM-Dm-5Do" firstAttribute="top" secondItem="eKb-I7-CdJ" secondAttribute="bottom" id="3Ia-Y0-OeI"/>
+                            <constraint firstItem="nOg-8r-Rwk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBY-ih-CzJ"/>
+                            <constraint firstItem="JMM-Dm-5Do" firstAttribute="height" secondItem="nOg-8r-Rwk" secondAttribute="height" multiplier="2:3" id="J1A-ao-EoR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMM-Dm-5Do" secondAttribute="trailing" id="RbZ-RA-lMN"/>
+                            <constraint firstItem="eKb-I7-CdJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kY0-H6-N8E"/>
+                            <constraint firstItem="JMM-Dm-5Do" firstAttribute="top" secondItem="nOg-8r-Rwk" secondAttribute="bottom" id="kej-XD-2Uv"/>
+                            <constraint firstItem="eKb-I7-CdJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lsy-rK-rQ1"/>
+                            <constraint firstAttribute="bottom" secondItem="JMM-Dm-5Do" secondAttribute="bottom" id="mRM-ys-ExG"/>
+                            <constraint firstItem="JMM-Dm-5Do" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oDx-VJ-T1u"/>
+                            <constraint firstItem="nOg-8r-Rwk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pge-Dj-iYo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eKb-I7-CdJ" secondAttribute="trailing" id="sbK-ZT-IZI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="awfarlakBgImage" destination="nOg-8r-Rwk" id="dhs-gv-3Kf"/>
+                        <outlet property="bigView" destination="8bC-Xf-vdC" id="Vz2-Uj-xtf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="65.625"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="JFa-p5-kfs">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginViewController" storyboardName="Authentication" referencedIdentifier="LoginViewController" id="h4P-FD-Xgv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIf-kp-13I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-317"/>
+        </scene>
+        <!--RegisterViewController-->
+        <scene sceneID="tXl-kh-E8W">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RegisterViewController" storyboardName="Authentication" referencedIdentifier="RegisterViewController" id="Sfy-o6-Mza" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-Px-7b6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="-317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appIcon2" width="5769" height="3877"/>
+        <image name="awfarlak" width="2260" height="1861"/>
+        <namedColor name="BgColor">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BtnColor">
+            <color red="0.9100000262260437" green="0.62400001287460327" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
