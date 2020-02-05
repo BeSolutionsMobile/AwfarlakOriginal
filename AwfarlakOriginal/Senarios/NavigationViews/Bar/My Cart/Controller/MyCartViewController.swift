@@ -49,6 +49,11 @@ class MyCartViewController: UIViewController {
     }
     
     @IBAction func complteOrderBtnPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: "OrderSuccessfulViewController") as! OrderSuccessfulViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+
+        //navigationController?.pushViewController(vc, animated: true)
     }
 }
 

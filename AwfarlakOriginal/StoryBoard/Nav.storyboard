@@ -15,7 +15,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="SideMenuNavigationController" storyboardName="SideMenu" referencedIdentifier="SideMenuNavigationController" id="0dT-CP-szt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oba-fY-BDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="-350"/>
+            <point key="canvasLocation" x="719" y="-373"/>
         </scene>
         <!--MyCartViewController-->
         <scene sceneID="pcz-zi-qMf">
@@ -23,7 +23,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="MyCartViewController" storyboardName="MyAwfarli" referencedIdentifier="MyCartViewController" id="phO-1e-nG4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bG-nJ-18D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720" y="-319"/>
+            <point key="canvasLocation" x="718" y="-340"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="lWJ-DS-b62">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="SearchStoryboard" referencedIdentifier="SearchViewController" id="4a1-4V-R0L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOR-yK-rpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-308"/>
         </scene>
         <!--Categories-->
         <scene sceneID="NOR-zZ-Mqq">
@@ -369,11 +377,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAY-Bv-h3c">
-                                                <rect key="frame" x="265" y="22" width="139" height="36"/>
+                                                <rect key="frame" x="317" y="22" width="87" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <state key="normal" title="Rate &amp; Reviews">
+                                                <state key="normal" title="Add Rate ">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addRateBtnPressed:" destination="F1o-c4-r3g" eventType="touchUpInside" id="FFN-hu-IOS"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FA-05-ZWN">
                                                 <rect key="frame" x="25" y="538" width="364" height="40"/>
@@ -494,6 +505,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48I-se-tqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2921.739130434783" y="47.544642857142854"/>
+        </scene>
+        <!--Add Rate View Controller-->
+        <scene sceneID="RXt-mc-RMO">
+            <objects>
+                <viewController storyboardIdentifier="AddRateViewController" id="ePC-0B-IUo" customClass="AddRateViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SlJ-sg-LBk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbc-LY-dNJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVO-aW-3xo">
+                                <rect key="frame" x="30" y="348" width="354" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqV-Ht-bCx">
+                                        <rect key="frame" x="131" y="20" width="92" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-Qk-EgS" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="67" y="60.5" width="220" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                <color key="value" name="RateColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                <color key="value" name="RateColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                <color key="value" name="RateColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgL-XN-9eB" customClass="CusstomButton" customModule="AwfarlakOriginal" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="120.5" width="294" height="40"/>
+                                        <color key="backgroundColor" name="BtnColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rgR-va-TwZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitBtnPressed:" destination="ePC-0B-IUo" eventType="touchUpInside" id="42T-Wk-LVc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="dqV-Ht-bCx" firstAttribute="top" secondItem="UVO-aW-3xo" secondAttribute="top" constant="20" id="10S-zJ-FDR"/>
+                                    <constraint firstItem="pgL-XN-9eB" firstAttribute="top" secondItem="rrC-Qk-EgS" secondAttribute="bottom" constant="20" id="7SE-Lp-qwO"/>
+                                    <constraint firstItem="pgL-XN-9eB" firstAttribute="centerX" secondItem="UVO-aW-3xo" secondAttribute="centerX" id="Hhn-ST-bc6"/>
+                                    <constraint firstItem="rrC-Qk-EgS" firstAttribute="top" secondItem="dqV-Ht-bCx" secondAttribute="bottom" constant="15" id="YSE-cT-j8D"/>
+                                    <constraint firstItem="rrC-Qk-EgS" firstAttribute="centerX" secondItem="UVO-aW-3xo" secondAttribute="centerX" id="bsB-5q-DHu"/>
+                                    <constraint firstItem="dqV-Ht-bCx" firstAttribute="centerX" secondItem="UVO-aW-3xo" secondAttribute="centerX" id="fNX-8Z-1Lw"/>
+                                    <constraint firstAttribute="height" constant="200" id="qpa-vd-cqD"/>
+                                    <constraint firstItem="pgL-XN-9eB" firstAttribute="leading" secondItem="UVO-aW-3xo" secondAttribute="leading" constant="30" id="yga-Uk-GG5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.2773972602739726" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UVO-aW-3xo" firstAttribute="centerX" secondItem="SlJ-sg-LBk" secondAttribute="centerX" id="Gl5-7P-VGM"/>
+                            <constraint firstItem="Wbc-LY-dNJ" firstAttribute="top" secondItem="SlJ-sg-LBk" secondAttribute="top" id="OYO-7M-kCO"/>
+                            <constraint firstItem="UVO-aW-3xo" firstAttribute="centerY" secondItem="SlJ-sg-LBk" secondAttribute="centerY" id="SEv-Xq-295"/>
+                            <constraint firstItem="WtC-T6-vc7" firstAttribute="trailing" secondItem="Wbc-LY-dNJ" secondAttribute="trailing" id="WPb-vJ-m9U"/>
+                            <constraint firstItem="WtC-T6-vc7" firstAttribute="trailing" secondItem="UVO-aW-3xo" secondAttribute="trailing" constant="30" id="foz-rK-Li0"/>
+                            <constraint firstAttribute="bottom" secondItem="Wbc-LY-dNJ" secondAttribute="bottom" id="o0i-fg-hw6"/>
+                            <constraint firstItem="Wbc-LY-dNJ" firstAttribute="leading" secondItem="WtC-T6-vc7" secondAttribute="leading" id="y05-ub-Apz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WtC-T6-vc7"/>
+                    </view>
+                    <connections>
+                        <outlet property="addRate" destination="rrC-Qk-EgS" id="Cv9-vk-Pge"/>
+                        <outlet property="bigView" destination="Wbc-LY-dNJ" id="yeq-K9-oO4"/>
+                        <outlet property="popupView" destination="UVO-aW-3xo" id="tEK-DS-SV1"/>
+                        <outlet property="submitBtn" destination="pgL-XN-9eB" id="avI-ZK-yD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8O-Yk-gXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.289855072464" y="735.9375"/>
         </scene>
         <!--Details Segmented View Controller-->
         <scene sceneID="55f-Ke-fji">
@@ -948,7 +1051,7 @@ Most of these species are found</string>
         <image name="popupImage" width="1920" height="1280"/>
         <image name="productDetails" width="21" height="21"/>
         <namedColor name="BgBarNavigationColor">
-            <color red="0.8970000147819519" green="0.67299997806549072" blue="0.17499999701976776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.89800000190734863" green="0.67500001192092896" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BgCollectionColor">
             <color red="0.91699999570846558" green="0.90200001001358032" blue="0.88400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

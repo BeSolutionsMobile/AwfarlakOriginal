@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FAQTableViewCell" rowHeight="60" id="KGk-i7-Jjw" customClass="FAQTableViewCell" customModule="AwfarlakOriginal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="￼What 3rd-party-applications" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-DA-YcF" customClass="DesignableUITextField" customModule="AwfarlakOriginal" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="279" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="4xI-q9-AOy"/>
+                        </constraints>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                <real key="value" value="-10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="faqPlus"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4v-Is-ssA">
+                        <rect key="frame" x="30" y="81" width="259" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaU-Or-B1A">
+                        <rect key="frame" x="20" y="20" width="279" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="gix-hc-PzD"/>
+                        </constraints>
+                        <connections>
+                            <action selector="questionClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DO0-pB-WWz"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="g4v-Is-ssA" secondAttribute="trailing" constant="30" id="CMP-tz-BDT"/>
+                    <constraint firstAttribute="bottom" secondItem="g4v-Is-ssA" secondAttribute="bottom" constant="5" id="D5K-dO-U7k"/>
+                    <constraint firstItem="XaU-Or-B1A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="NWw-MT-evA"/>
+                    <constraint firstAttribute="trailing" secondItem="XaU-Or-B1A" secondAttribute="trailing" constant="20" id="Sb5-ha-BsY"/>
+                    <constraint firstItem="H5R-DA-YcF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="bgZ-pK-xUl"/>
+                    <constraint firstAttribute="trailing" secondItem="H5R-DA-YcF" secondAttribute="trailing" constant="20" id="fPN-Kt-Zw0"/>
+                    <constraint firstItem="g4v-Is-ssA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="fuE-go-95n"/>
+                    <constraint firstItem="XaU-Or-B1A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lUM-ER-4wa"/>
+                    <constraint firstItem="g4v-Is-ssA" firstAttribute="top" secondItem="H5R-DA-YcF" secondAttribute="bottom" constant="21" id="pMd-mX-p7C"/>
+                    <constraint firstItem="H5R-DA-YcF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ywy-Fy-oVA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ansswerLbl" destination="g4v-Is-ssA" id="Nxa-3E-SfQ"/>
+                <outlet property="questionTf" destination="H5R-DA-YcF" id="H2F-yw-34B"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="113.16964285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="faqPlus" width="21" height="21"/>
+    </resources>
+</document>

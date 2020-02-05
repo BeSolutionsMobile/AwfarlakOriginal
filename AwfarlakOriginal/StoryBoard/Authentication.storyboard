@@ -138,7 +138,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Send Password">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="sendNewPasswordBtnPressed:" destination="Lpk-hB-S7n" eventType="touchUpInside" id="Bmj-6C-vUW"/>
@@ -568,7 +568,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <state key="normal" title="Create Account">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="createAccountBtnPreesed:" destination="OZV-YG-Xj1" eventType="touchUpInside" id="zzZ-7A-2fG"/>
@@ -779,7 +779,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <state key="normal" title="Log In">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="loginBtnPressed:" destination="KJZ-aq-F20" eventType="touchUpInside" id="XcF-sp-EJ9"/>

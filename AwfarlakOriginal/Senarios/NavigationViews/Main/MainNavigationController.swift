@@ -94,6 +94,16 @@ extension UIViewController {
     
     
     @objc func searchBtn(){
+        let screen = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromBottom
+        view.window!.layer.add(transition, forKey: kCATransition)
+        screen!.modalPresentationStyle = .overFullScreen
+        self.present(screen!, animated: false, completion: nil)
+        
+        
 //            let vc = storyboard?.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
 //            vc.modalPresentationStyle = .overFullScreen
 //            self.present(vc, animated: true, completion: nil)

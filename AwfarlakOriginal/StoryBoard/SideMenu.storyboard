@@ -637,6 +637,22 @@
             </objects>
             <point key="canvasLocation" x="-422" y="-266"/>
         </scene>
+        <!--AboutUsViewController-->
+        <scene sceneID="osd-kc-hGb">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AboutUsViewController" storyboardName="AboutAwfalakStoryboard" referencedIdentifier="AboutUsViewController" id="Ukd-Ed-knK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wIr-Pe-Gp5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-425" y="-131"/>
+        </scene>
+        <!--ContactUsViewController-->
+        <scene sceneID="uYl-zt-4zp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ContactUsViewController" storyboardName="AboutAwfalakStoryboard" referencedIdentifier="ContactUsViewController" id="JNp-sl-YF5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rtx-eN-VQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="-105"/>
+        </scene>
         <!--ProfileViewController-->
         <scene sceneID="pL8-SI-zzV">
             <objects>
@@ -668,6 +684,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQh-6J-PXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-421" y="-161"/>
+        </scene>
+        <!--FAQViewController-->
+        <scene sceneID="yIy-Dd-CQj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgT-G8-dbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="FAQViewController" storyboardName="AboutAwfalakStoryboard" referencedIdentifier="FAQViewController" id="Y71-cj-VqO" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="-73"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="1ny-b7-Qxd">
@@ -704,7 +728,7 @@
         <image name="profileMenu" width="21" height="21"/>
         <image name="sideMenuBag" width="5581" height="3058"/>
         <namedColor name="BgBarNavigationColor">
-            <color red="0.8970000147819519" green="0.67299997806549072" blue="0.17499999701976776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.89800000190734863" green="0.67500001192092896" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BgCollectionColor">
             <color red="0.91699999570846558" green="0.90200001001358032" blue="0.88400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

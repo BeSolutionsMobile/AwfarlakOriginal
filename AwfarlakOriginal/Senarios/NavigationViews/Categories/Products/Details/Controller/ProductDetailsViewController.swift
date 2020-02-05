@@ -156,6 +156,15 @@ class ProductDetailsViewController: UIViewController {
     }
     
     
+    
+    @IBAction func addRateBtnPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: "AddRateViewController") as! AddRateViewController
+              vc.modalPresentationStyle = .overFullScreen
+              self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func callBtnPressed(_ sender: UIButton) {
     }
     

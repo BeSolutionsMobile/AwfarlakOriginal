@@ -12,7 +12,7 @@ import SideMenu
 
 struct ConstantMenu {
        
-    var controller1 = ["ProfileViewController","CategoriesViewController", "MyCartViewController" ,  "MyFavouriteViewController"  , "MyComparisonViewController" ,"MyBalalnceViewController" , "AboutDrNourViewController" , "FAQViewController" , "ReviewsViewController" , "GalleryViewController","ContactusViewController"]
+    var controller1 = ["ProfileViewController","CategoriesViewController", "MyCartViewController" ,  "MyFavouriteViewController"  , "MyComparisonViewController" ,"AboutUsViewController" , "ContactUsViewController" , "FAQViewController"]
     
     
 }
