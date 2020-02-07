@@ -9,7 +9,14 @@
 import UIKit
 
 class AwfarlakSideMenuViewController: UIViewController {
-
+    @IBOutlet weak var langView: UIView!{
+        didSet{
+            langView.layer.cornerRadius = self.langView.frame.height/2
+            langView.layer.masksToBounds = true
+           
+        }
+    }
+    
     @IBOutlet weak var circleView: UIView!{
         didSet{
             circleView.layer.cornerRadius = self.circleView.frame.height/2
@@ -56,4 +63,8 @@ class AwfarlakSideMenuViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func changeLangBtnPressed(_ sender: UIButton) {
+    }
+    
 }
