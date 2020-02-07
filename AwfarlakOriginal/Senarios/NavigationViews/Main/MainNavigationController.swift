@@ -8,7 +8,7 @@
 
 import UIKit
 import SideMenu
-
+import MOLH
 class MainNavigationController: UINavigationController  {
     
     override func viewDidLoad() {
@@ -62,8 +62,12 @@ extension UIViewController {
         
         
         let back = UIBarButtonItem(title: "", style: .done,target: self, action: #selector(backBtn))
-        back.image = UIImage(named: "back")
-
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+                 back.image = UIImage(named: "back")
+             }
+             else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+                 back.image = UIImage(named: "backAr")
+             }
         back.tintColor = UIColor.white
         navigationItem.leftBarButtonItem = back
         

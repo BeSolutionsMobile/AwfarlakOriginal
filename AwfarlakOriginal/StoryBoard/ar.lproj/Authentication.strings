@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "0yy-BB-ifS"; */
+"0yy-BB-ifS.text" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "1BY-NH-c9p"; */
+"1BY-NH-c9p.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Don't Have Account ?"; ObjectID = "1nY-pQ-9VJ"; */
+"1nY-pQ-9VJ.normalTitle" = "لا تملك حساب ؟";
+
+/* Class = "UIButton"; normalTitle = "Send Password"; ObjectID = "4ce-hD-hTi"; */
+"4ce-hD-hTi.normalTitle" = "ارسال الرقم السري";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "AQZ-fv-Iil"; */
+"AQZ-fv-Iil.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "B1H-Pb-HNC"; */
+"B1H-Pb-HNC.text" = "اسم المستخدم";
+
+/* Class = "UIButton"; normalTitle = "Go To Log In"; ObjectID = "Cbo-1x-NSa"; */
+"Cbo-1x-NSa.normalTitle" = "الذهاب الي تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "DEd-AV-LRY"; */
+"DEd-AV-LRY.text" = "الرقم السري";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Oa2-Gw-L5g"; */
+"Oa2-Gw-L5g.text" = "الرقم السري";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "Rc6-NK-Z8Z"; */
+"Rc6-NK-Z8Z.text" = "تاكيد الرقم السري";
+
+/* Class = "UILabel"; text = "I Agree With The"; ObjectID = "YPr-yx-5XH"; */
+"YPr-yx-5XH.text" = "اوفق علي هذا ";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "abc-Bi-nKX"; */
+"abc-Bi-nKX.normalTitle" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "cCc-to-5BU"; */
+"cCc-to-5BU.text" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "Forgot Your Password"; ObjectID = "cIa-Hu-nJD"; */
+"cIa-Hu-nJD.normalTitle" = "نسيت رقمك السري";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "klq-8e-3gk"; */
+"klq-8e-3gk.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Log In"; ObjectID = "nhd-NI-RoD"; */
+"nhd-NI-RoD.text" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Back To log In"; ObjectID = "nzR-77-3nk"; */
+"nzR-77-3nk.normalTitle" = "الذهاب الي تسجيل الدخول";

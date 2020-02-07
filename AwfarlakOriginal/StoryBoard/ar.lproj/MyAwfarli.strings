@@ -1,0 +1,75 @@
+
+/* Class = "UINavigationItem"; title = "My Comparison"; ObjectID = "1BZ-O7-h9X"; */
+"1BZ-O7-h9X.title" = "مقارنتي";
+
+/* Class = "UILabel"; text = "Rs.3.35/KG"; ObjectID = "1Bv-sS-Vfg"; */
+"1Bv-sS-Vfg.text" = "Rs.٣.٧٥/كجم";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "1cp-ip-Iwq"; */
+"1cp-ip-Iwq.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "4pH-OY-8ir"; */
+"4pH-OY-8ir.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "310 Buyers"; ObjectID = "6hT-wh-n2O"; */
+"6hT-wh-n2O.text" = "٣١٠ مشتري";
+
+/* Class = "UIButton"; normalTitle = "Finish Comparision"; ObjectID = "CbH-rI-71p"; */
+"CbH-rI-71p.normalTitle" = "انهاء المقارنة";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "Ewk-wK-a2o"; */
+"Ewk-wK-a2o.text" = "اسم المستخدم";
+
+/* Class = "UILabel"; text = "Rs.21.50"; ObjectID = "F6j-4U-dA6"; */
+"F6j-4U-dA6.text" = "Rs.٢١.٥٠";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "GHc-JA-GsD"; */
+"GHc-JA-GsD.text" = "الاجمالي";
+
+/* Class = "UINavigationItem"; title = "My Cart"; ObjectID = "H8S-9D-dHz"; */
+"H8S-9D-dHz.title" = "سلتي";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "KNE-9I-caO"; */
+"KNE-9I-caO.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "ENJOY NATURAL"; ObjectID = "Lz3-Pe-Hsx"; */
+"Lz3-Pe-Hsx.text" = "استمتع الطبيعية";
+
+/* Class = "UIButton"; normalTitle = "Complete Your Order "; ObjectID = "U6n-3F-6df"; */
+"U6n-3F-6df.normalTitle" = "اكمل طلبك ";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "Wgw-dB-8vP"; */
+"Wgw-dB-8vP.normalTitle" = "تعديل";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "XpK-i7-YaV"; */
+"XpK-i7-YaV.text" = "الرقم السري";
+
+/* Class = "UILabel"; text = "Rs.3.75/KG"; ObjectID = "aga-r7-6IB"; */
+"aga-r7-6IB.text" = "Rs.٣.٧٥/كجم";
+
+/* Class = "UINavigationItem"; title = "My Favourite"; ObjectID = "d6b-dT-PxZ"; */
+"d6b-dT-PxZ.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "Rs.5.50/KG"; ObjectID = "gzx-MD-hXw"; */
+"gzx-MD-hXw.text" = "Rs.٥.٥٠/كجم" ;
+
+/* Class = "UILabel"; text = "1"; ObjectID = "j12-me-mC6"; */
+"j12-me-mC6.text" = "١";
+
+/* Class = "UILabel"; text = "Strawberry"; ObjectID = "mpV-xR-hMy"; */
+"mpV-xR-hMy.text" = "الفراولة";
+
+/* Class = "UILabel"; text = " ORDER SUCCESSFUL..."; ObjectID = "nZn-fL-74i"; */
+"nZn-fL-74i.text" = " اكتمال الطلب بنجاح...";
+
+/* Class = "UILabel"; text = "Apple"; ObjectID = "oml-uV-bBX"; */
+"oml-uV-bBX.text" = "التفاح";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "q3d-Yl-doP"; */
+"q3d-Yl-doP.title" = "الملف الشخصي";
+
+/* Class = "UILabel"; text = "Rs.5.50/KG"; ObjectID = "u9L-mL-Scj"; */
+"u9L-mL-Scj.text" = "Rs.٥.٥٠/كجم";
+
+/* Class = "UILabel"; text = "Strawberry"; ObjectID = "yBm-hf-xpK"; */
+"yBm-hf-xpK.text" = "الفراولة";

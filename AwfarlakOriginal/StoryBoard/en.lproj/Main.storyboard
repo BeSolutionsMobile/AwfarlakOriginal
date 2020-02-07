@@ -155,7 +155,6 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="wc8-y2-V85" id="mqS-bV-epy"/>
-                        <outlet property="arrowBtn" destination="HYb-Vu-bqH" id="08C-1X-tOl"/>
                         <outlet property="bigView" destination="8yE-hY-K1t" id="nsg-c9-Be0"/>
                         <outlet property="fristV" destination="azb-g4-J0u" id="rq3-wk-oWI"/>
                         <outlet property="headerImage" destination="l6V-hA-RcA" id="lEn-tu-bCH"/>
@@ -346,7 +345,6 @@
                     </view>
                     <connections>
                         <outlet property="anmView" destination="MOr-Vq-ceN" id="diu-9O-C2Z"/>
-                        <outlet property="arrowBtn" destination="jdc-VY-LIe" id="bfu-ce-kxe"/>
                         <outlet property="bigView" destination="Y8m-bf-TAV" id="efr-cV-jzn"/>
                         <outlet property="fristV" destination="YJy-uA-cDI" id="Iyp-xN-nID"/>
                         <outlet property="mainView" destination="07O-m6-Je1" id="1oE-zk-QhV"/>
@@ -513,7 +511,6 @@ journey to get everything you want</string>
                         <viewLayoutGuide key="safeArea" id="IDY-1o-bxR"/>
                     </view>
                     <connections>
-                        <outlet property="arrowBtn" destination="b2k-oz-oBb" id="qtS-99-SUV"/>
                         <outlet property="bigView" destination="e4a-Y2-0Kr" id="aSq-gm-j7m"/>
                         <outlet property="fristV" destination="RLj-Xz-thy" id="Opw-kT-oQh"/>
                         <outlet property="mainView" destination="qyY-yQ-nx4" id="g4E-8s-w4L"/>

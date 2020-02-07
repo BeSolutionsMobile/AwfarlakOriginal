@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import MOLH
 
 class SecondViewController: UIViewController {
     
+    @IBOutlet weak var arrowBtn: UIButton!
     @IBOutlet weak var anmView: UIView!
     @IBOutlet var bigView: UIView!
     @IBOutlet weak var mainView: UIView!
@@ -45,11 +47,23 @@ class SecondViewController: UIViewController {
         mainView.layer.cornerRadius = self.bigView.bounds.height / 2
         mainView.layer.masksToBounds = true
         startAnimation()
+        changeArrow()
         swipToRightAndLeft()
     }
     
+    func changeArrow()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            self.arrowBtn.setImage(UIImage(named: "nextWellcome"), for: .normal)
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            self.arrowBtn.setImage(UIImage(named: "backWellcome"), for: .normal)
+        }
+    }
+    
     func swipToRightAndLeft(){
+        
         let swipeToLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        
         swipeToLeft.direction = .left
         self.view.addGestureRecognizer(swipeToLeft)
         
@@ -60,14 +74,28 @@ class SecondViewController: UIViewController {
     
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer){
         if sender.direction == .right {
-            let vc = storyboard?.instantiateViewController(identifier: "FristViewController") as! FristViewController
-            vc.modalPresentationStyle = .fullScreen
-            presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromRight)
+            if MOLHLanguage.currentAppleLanguage() == "en"{
+                let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
+                vc.modalPresentationStyle = .fullScreen
+                presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromRight)            }
+            else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+                let vc = storyboard?.instantiateViewController(identifier: "FristViewController") as! FristViewController
+                vc.modalPresentationStyle = .fullScreen
+                presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromRight)
+                
+            }
+            
+            
             
         } else if sender.direction == .left {
-            let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
-            vc.modalPresentationStyle = .fullScreen
-            presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromLeft)
+            if MOLHLanguage.currentAppleLanguage() == "en"{
+                let vc = storyboard?.instantiateViewController(identifier: "FristViewController") as! FristViewController
+                vc.modalPresentationStyle = .fullScreen
+                presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromLeft)                   }
+            else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+                let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
+                vc.modalPresentationStyle = .fullScreen
+                presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromLeft)                   }
             
             
         }
@@ -80,12 +108,12 @@ class SecondViewController: UIViewController {
         let view = StartAnimationView.showLottie(view: self.anmView, fileName: "shop", contentMode: .scaleAspectFit)
         view.play { (finished) in
             if finished {
-                self.titleLbl.text = "You can also buy any of the products to get an enjoyable and pleasing shopping opportunity ."
+                self.titleLbl.text = "wellcom2Cart".localized
                 let view = StartAnimationView.showLottie(view: self.anmView, fileName: "cart", contentMode: .scaleAspectFit)
                 view.play { (finished) in
                     if finished {
                         self.anmView.isHidden = true
-                        self.titleLbl.text = " As you browse our products, you can view the statistics about the product and its ratings, and you can add it to your favorites list for your reference at any time.You can also buy any of the products to get an enjoyable and pleasing shopping opportunity ."
+                        self.titleLbl.text =  "wellcom2total".localized
                         self.wellcomImage.isHidden = false
                     } else {
                         // Fallback on earlier versions

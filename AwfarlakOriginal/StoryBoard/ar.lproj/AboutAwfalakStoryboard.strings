@@ -1,0 +1,22 @@
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "2hk-u1-5BM"; */
+"2hk-u1-5BM.text" = "رقم الهاتف";
+
+/* Class = "UINavigationItem"; title = "Contact Us"; ObjectID = "4WP-ug-eo6"; */
+"4WP-ug-eo6.title" = "اصل بنا ";
+
+/* Class = "UILabel"; text = "About Awfarlak"; ObjectID = "HXE-e5-8D5"; */
+"HXE-e5-8D5.text" = "عن اوفرلك";
+
+/* Class = "UILabel"; text = "01008182062 - 01024439000 - 01004646198\n"; ObjectID = "SNp-du-fsr"; */
+"SNp-du-fsr.text" = "٠١٠٠٨١٨٢٠٦٢ - ٠١٠٢٤٤٣٩٠٠ - ٠١٠٠٤٦٤٦١٩٨\n";
+
+/* Class = "UINavigationItem"; title = "About Us"; ObjectID = "fil-fm-erd"; */
+"fil-fm-erd.title" = "معلومات عن";
+
+/* Class = "UILabel"; text = "Awfarlk is the largest commercial website. A site specialized in everything you need. We have a diverse assortment of products that suit all categories. It is one of the pioneering companies in the field of electronic marketing to enable small companies to provide services to customers throughout the Republic in a broader way. Overluck company pledges to provide international quality and well-known brands to provide The highest level of customers through online sale"; ObjectID = "hOv-2K-YFg"; */
+"hOv-2K-YFg.text" = "أوفرلك  أكبر موقع تجارى  موقع متخصص فى كل ما يلزمك لدينا تشكيلة متنوعة من المنتجات التى تناسب كل الفئات و تعد من الشركات الرائدة فى مجال التسويق الالكترونى لتمكين الشركات الصغيرة من تقديم خدماتها للعملاء فى كل ارجاء الجمهوريه بشكل اوسع وتتعهد شركة اوفرلك بتقديم الجودة العالمية والماركات المعروفة لتوفير أعلى مستوى للعملاء عن طريق البيع عبر الانترنت
+";
+
+/* Class = "UINavigationItem"; title = "FAQ"; ObjectID = "u0C-Qf-dVU"; */
+"u0C-Qf-dVU.title" = "التعليمات";

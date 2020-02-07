@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import MOLH
 
 class FristViewController: UIViewController {
     
+    @IBOutlet weak var arrowBtn: UIButton!
     @IBOutlet weak var shopingLbl: UILabel!
     @IBOutlet var bigView: UIView!
     @IBOutlet weak var headerImage: UIImageView!
@@ -44,12 +46,28 @@ class FristViewController: UIViewController {
         mainView.layer.cornerRadius = self.bigView.bounds.height / 2
         mainView.layer.masksToBounds = true
         startAnimation()
+        changeArrow()
         swipToRight()
+    }
+    
+    func changeArrow()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            self.arrowBtn.setImage(UIImage(named: "nextWellcome"), for: .normal)
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            self.arrowBtn.setImage(UIImage(named: "backWellcome"), for: .normal)
+        }
     }
     
     func swipToRight(){
         let swipeToLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeSuccessAction))
-        swipeToLeft.direction = .left
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            swipeToLeft.direction = .right
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            swipeToLeft.direction = .left
+        }
+        
         self.view.addGestureRecognizer(swipeToLeft)
         
     }

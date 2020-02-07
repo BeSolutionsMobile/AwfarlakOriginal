@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "Fqu-Lz-HiL"; */
+"Fqu-Lz-HiL.text" = "المنتاجات";
+
+/* Class = "UILabel"; text = "Select Type And Write Your Search"; ObjectID = "Rbw-Gw-csW"; */
+"Rbw-Gw-csW.text" = "اختر النوع واكتب بحثك";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "gSG-2M-1mT"; */
+"gSG-2M-1mT.text" = "التصنيفات";
+
+/* Class = "UIButton"; normalTitle = "Search ?"; ObjectID = "q2H-lu-KLo"; */
+"q2H-lu-KLo.normalTitle" = "بحث ؟ ";

@@ -1,0 +1,90 @@
+
+/* Class = "UISegmentedControl"; 2ot-fh-lng.segmentTitles[0] = "Details"; ObjectID = "2ot-fh-lng"; */
+"2ot-fh-lng.segmentTitles[0]" = "التفاصيل";
+
+/* Class = "UISegmentedControl"; 2ot-fh-lng.segmentTitles[1] = "Comments"; ObjectID = "2ot-fh-lng"; */
+"2ot-fh-lng.segmentTitles[1]" = "التعليقات";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "8As-2L-rCi"; */
+"8As-2L-rCi.text" = "%";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9OU-GZ-gp8"; */
+"9OU-GZ-gp8.text" = "Label";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "9mw-KU-F8v"; */
+"9mw-KU-F8v.text" = "١٠";
+
+/* Class = "UILabel"; text = "Mango Details"; ObjectID = "AS8-kQ-wbC"; */
+"AS8-kQ-wbC.text" = "تفاصيل المانجو";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "EOz-E9-GEu"; */
+"EOz-E9-GEu.text" = "خصم";
+
+/* Class = "UINavigationItem"; title = "Products"; ObjectID = "HEA-nh-g3L"; */
+"HEA-nh-g3L.title" = "المنتاجات";
+
+/* Class = "UILabel"; text = "LabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLaLabelLabelLabelLabelLabelLabelLaLabelLa"; ObjectID = "K1k-2V-TB4"; */
+"K1k-2V-TB4.text" = "منتج جميل جدأ وخصم ممتاز ورائع ";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "K4P-ed-ke6"; */
+"K4P-ed-ke6.text" = "١";
+
+/* Class = "UIButton"; normalTitle = " Add To Cart"; ObjectID = "UCY-Xg-68B"; */
+"UCY-Xg-68B.normalTitle" = " اضف الي السلة";
+
+/* Class = "UINavigationItem"; title = "Mango"; ObjectID = "Va0-6E-YxG"; */
+"Va0-6E-YxG.title" = "المانجو";
+
+/* Class = "UILabel"; text = "Mostafa"; ObjectID = "Yra-fz-z8W"; */
+"Yra-fz-z8W.text" = "مصطفي";
+
+/* Class = "UILabel"; text = "Rs.3.75/KG"; ObjectID = "c2H-Jh-kf9"; */
+"c2H-Jh-kf9.text" = "Rs.٣.٧٥/كجم";
+
+/* Class = "UILabel"; text = "Thaengeonesusarbejluoincgysstontheefrcuaitsh(derwupfeasm) iplyroAdnuacceadrdfriaocmeae.\nnumerous species of tropical trees belonging to the flowering Mangoes are native to South Asia,[1][2] from where the\n plant genus Mangifera, cultivated mostly for its edible fruit. \"common mango\" or \"Indian mango\", Mangifera indica, has\nMost of these species are found"; ObjectID = "cJT-xp-5G4"; */
+"cJT-xp-5G4.text" = "المانجو هي حجر الفاكهة العصير (النويات) المنتجة منأنواع عديدة من الأشجار الاستوائية التي تنتمي إلى المانجو المزهرة هي موطنها الأصلي في جنوب آسيا ، [1] [2] من حيث جنس نبات ، المزروعة في الغالب لثمرة صالحة للأكل. المانجو المشترك أو المانجو الهندي ، مانجيفيرا إنديكا ، لديهتم العثور على معظم هذه الأنواع";
+
+/* Class = "UILabel"; text = "Select Quantity"; ObjectID = "dbK-op-HeI"; */
+"dbK-op-HeI.text" = "اختار الكيمة";
+
+/* Class = "UILabel"; text = "Rate Now"; ObjectID = "dqV-Ht-bCx"; */
+"dqV-Ht-bCx.text" = "التقيم الان ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e7q-wX-y6o"; */
+"e7q-wX-y6o.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "310 Buyers"; ObjectID = "eCN-N8-5Ed"; */
+"eCN-N8-5Ed.text" = "٣١٠ مشتري";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gSd-xl-JjQ"; */
+"gSd-xl-JjQ.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Categories"; ObjectID = "k5v-Ae-x3a"; */
+"k5v-Ae-x3a.title" = "التصنيفات";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nDT-lI-ShQ"; */
+"nDT-lI-ShQ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = " Add To Cart"; ObjectID = "nab-nD-dcx"; */
+"nab-nD-dcx.normalTitle" = "اضف الي السلة ";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "ogz-Kw-Yln"; */
+"ogz-Kw-Yln.normalTitle" = "ارسل";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "pgL-XN-9eB"; */
+"pgL-XN-9eB.normalTitle" = "إرسال";
+
+/* Class = "UIButton"; normalTitle = "Add Rate "; ObjectID = "qAY-Bv-h3c"; */
+"qAY-Bv-h3c.normalTitle" = "اضف تقيم ";
+
+/* Class = "UILabel"; text = "Rs.3.75/KG"; ObjectID = "syo-Y6-7FW"; */
+"syo-Y6-7FW.text" = "Rs.٣.٧٥/كجم";
+
+/* Class = "UILabel"; text = "Rs.5.50/KG"; ObjectID = "uhW-li-UGp"; */
+"uhW-li-UGp.text" = "Rs.٣.٧٥/كجم";
+
+/* Class = "UILabel"; text = "Mango Details"; ObjectID = "vii-Vp-U7q"; */
+"vii-Vp-U7q.text" = "تفاصيل المانجو";
+
+/* Class = "UITextField"; placeholder = "Write a Comment...."; ObjectID = "zDz-Xq-wyP"; */
+"zDz-Xq-wyP.placeholder" = "اكتب تعليق...";

@@ -16,18 +16,14 @@
 		041E0EE523DEF2870034CE0F /* AwfarlakOriginalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0EE423DEF2870034CE0F /* AwfarlakOriginalTests.swift */; };
 		041E0EF023DEF2870034CE0F /* AwfarlakOriginalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0EEF23DEF2870034CE0F /* AwfarlakOriginalUITests.swift */; };
 		3B0DEA8F23E9B56200250EE2 /* AddRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DEA8E23E9B56200250EE2 /* AddRateViewController.swift */; };
-		3B0DEA9323E9BE7700250EE2 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0DEA9223E9BE7700250EE2 /* SearchStoryboard.storyboard */; };
 		3B0DEA9523E9C71A00250EE2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DEA9423E9C71A00250EE2 /* SearchViewController.swift */; };
 		3B11F0E123E2E039003FB6B0 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0E023E2E039003FB6B0 /* CategoriesViewController.swift */; };
 		3B11F0E823E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0E723E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift */; };
 		3B11F0EC23E2FDDE003FB6B0 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */; };
-		3B12FEF323E0439700C7A75D /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B12FEF223E0439700C7A75D /* Authentication.storyboard */; };
 		3B12FEF523E04A4E00C7A75D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */; };
-		3B13E68C23E5AD2000D797AA /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B13E68B23E5AD2000D797AA /* SideMenu.storyboard */; };
 		3B13E69223E5AFAD00D797AA /* ConstantMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13E69123E5AFAD00D797AA /* ConstantMenu.swift */; };
 		3B13E69523E5AFDA00D797AA /* AwfarlakSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13E69423E5AFDA00D797AA /* AwfarlakSideMenuViewController.swift */; };
 		3B13E69823E5D03500D797AA /* SideMenu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B13E69723E5D03500D797AA /* SideMenu.xcassets */; };
-		3B13E69A23E5F63600D797AA /* MyAwfarli.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B13E69923E5F63600D797AA /* MyAwfarli.storyboard */; };
 		3B13E6A323E5F7B800D797AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13E6A223E5F7B800D797AA /* ProfileViewController.swift */; };
 		3B13E6A523E5F7E500D797AA /* MyFavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13E6A423E5F7E500D797AA /* MyFavouriteViewController.swift */; };
 		3B13E6A723E5F80E00D797AA /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13E6A623E5F80E00D797AA /* MyCartViewController.swift */; };
@@ -40,9 +36,15 @@
 		3B148B9323EAF09000839538 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B148B9223EAF09000839538 /* AboutUsViewController.swift */; };
 		3B148B9A23EAF0E800839538 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B148B9923EAF0E800839538 /* ContactUsViewController.swift */; };
 		3B148B9C23EAF0FE00839538 /* ContactUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B148B9B23EAF0FE00839538 /* ContactUsTableViewCell.swift */; };
-		3B148B9E23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B148B9D23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard */; };
 		3B176EC323E6F21A00C89661 /* MyCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B176EC223E6F21A00C89661 /* MyCartTableViewCell.swift */; };
 		3B1A644523EDA91500533F0F /* fav.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A644423EDA91400533F0F /* fav.json */; };
+		3B1A645123EDE31F00533F0F /* Nav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A645323EDE31F00533F0F /* Nav.storyboard */; };
+		3B1A645623EDEACB00533F0F /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A645823EDEACB00533F0F /* Authentication.storyboard */; };
+		3B1A645B23EDEF4C00533F0F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A645D23EDEF4C00533F0F /* SideMenu.storyboard */; };
+		3B1A646023EDF2E600533F0F /* MyAwfarli.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A646223EDF2E600533F0F /* MyAwfarli.storyboard */; };
+		3B1A646523EDF55C00533F0F /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A646723EDF55C00533F0F /* SearchStoryboard.storyboard */; };
+		3B1A646A23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A646C23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard */; };
+		3B1A646F23EE085800533F0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A647123EE085800533F0F /* Localizable.strings */; };
 		3B1C310723E4918500C14138 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310623E4918500C14138 /* ProductsViewController.swift */; };
 		3B1C310923E491B000C14138 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */; };
 		3B1C310D23E4C4EA00C14138 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */; };
@@ -61,7 +63,6 @@
 		3B21693523DF06C2008D4920 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21692D23DF06C2008D4920 /* DesignableUITextField.swift */; };
 		3B21693A23DF074E008D4920 /* CusstomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21693923DF074D008D4920 /* CusstomButton.swift */; };
 		3B21693C23DF0E5F008D4920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21693B23DF0E5F008D4920 /* LoginViewController.swift */; };
-		3B21693E23DF1FB1008D4920 /* Nav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B21693D23DF1FB0008D4920 /* Nav.storyboard */; };
 		3B21697A23DF2689008D4920 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21695323DF2688008D4920 /* MainNavigationController.swift */; };
 		3B21697B23DF2689008D4920 /* SSBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21695423DF2688008D4920 /* SSBadgeButton.swift */; };
 		3B21698A23DF2913008D4920 /* Navigation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B21698923DF2913008D4920 /* Navigation.xcassets */; };
@@ -100,7 +101,6 @@
 		041E0ECD23DEF2840034CE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041E0ECF23DEF2840034CE0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		041E0ED123DEF2840034CE0F /* AwfarlakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwfarlakViewController.swift; sourceTree = "<group>"; };
-		041E0ED423DEF2840034CE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		041E0ED623DEF2870034CE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041E0ED923DEF2870034CE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041E0EDB23DEF2870034CE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,18 +111,14 @@
 		041E0EEF23DEF2870034CE0F /* AwfarlakOriginalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwfarlakOriginalUITests.swift; sourceTree = "<group>"; };
 		041E0EF123DEF2870034CE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0DEA8E23E9B56200250EE2 /* AddRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRateViewController.swift; sourceTree = "<group>"; };
-		3B0DEA9223E9BE7700250EE2 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		3B0DEA9423E9C71A00250EE2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3B11F0E023E2E039003FB6B0 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		3B11F0E723E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
-		3B12FEF223E0439700C7A75D /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = AwfarlakOriginal/StoryBoard/Authentication.storyboard; sourceTree = SOURCE_ROOT; };
 		3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		3B13E68B23E5AD2000D797AA /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		3B13E69123E5AFAD00D797AA /* ConstantMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantMenu.swift; sourceTree = "<group>"; };
 		3B13E69423E5AFDA00D797AA /* AwfarlakSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwfarlakSideMenuViewController.swift; sourceTree = "<group>"; };
 		3B13E69723E5D03500D797AA /* SideMenu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SideMenu.xcassets; sourceTree = "<group>"; };
-		3B13E69923E5F63600D797AA /* MyAwfarli.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAwfarli.storyboard; sourceTree = "<group>"; };
 		3B13E6A223E5F7B800D797AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3B13E6A423E5F7E500D797AA /* MyFavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavouriteViewController.swift; sourceTree = "<group>"; };
 		3B13E6A623E5F80E00D797AA /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
@@ -135,9 +131,25 @@
 		3B148B9223EAF09000839538 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		3B148B9923EAF0E800839538 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		3B148B9B23EAF0FE00839538 /* ContactUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewCell.swift; sourceTree = "<group>"; };
-		3B148B9D23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAwfalakStoryboard.storyboard; sourceTree = "<group>"; };
 		3B176EC223E6F21A00C89661 /* MyCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartTableViewCell.swift; sourceTree = "<group>"; };
 		3B1A644423EDA91400533F0F /* fav.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fav.json; sourceTree = "<group>"; };
+		3B1A644623EDD81F00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3B1A644F23EDE01C00533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B1A645023EDE10900533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		3B1A645223EDE31F00533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Nav.storyboard; sourceTree = "<group>"; };
+		3B1A645523EDE32F00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Nav.strings; sourceTree = "<group>"; };
+		3B1A645723EDEACB00533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
+		3B1A645A23EDEAD300533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Authentication.strings; sourceTree = "<group>"; };
+		3B1A645C23EDEF4C00533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
+		3B1A645F23EDEF7F00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SideMenu.strings; sourceTree = "<group>"; };
+		3B1A646123EDF2E600533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyAwfarli.storyboard; sourceTree = "<group>"; };
+		3B1A646423EDF2F000533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MyAwfarli.strings; sourceTree = "<group>"; };
+		3B1A646623EDF55C00533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchStoryboard.storyboard; sourceTree = "<group>"; };
+		3B1A646923EDF56500533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SearchStoryboard.strings; sourceTree = "<group>"; };
+		3B1A646B23EDF62200533F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AboutAwfalakStoryboard.storyboard; sourceTree = "<group>"; };
+		3B1A646E23EDF62E00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AboutAwfalakStoryboard.strings; sourceTree = "<group>"; };
+		3B1A647023EE085800533F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B1A647223EE085D00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B1C310623E4918500C14138 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +168,6 @@
 		3B21692D23DF06C2008D4920 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		3B21693923DF074D008D4920 /* CusstomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusstomButton.swift; sourceTree = "<group>"; };
 		3B21693B23DF0E5F008D4920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3B21693D23DF1FB0008D4920 /* Nav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nav.storyboard; sourceTree = "<group>"; };
 		3B21695323DF2688008D4920 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3B21695423DF2688008D4920 /* SSBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBadgeButton.swift; sourceTree = "<group>"; };
 		3B21698923DF2913008D4920 /* Navigation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Navigation.xcassets; sourceTree = "<group>"; };
@@ -226,6 +237,7 @@
 		041E0ECC23DEF2840034CE0F /* AwfarlakOriginal */ = {
 			isa = PBXGroup;
 			children = (
+				3B1A644823EDDE1300533F0F /* Localizable */,
 				3BDB047423E33D100052FCDD /* Core */,
 				3B21692823DF06C2008D4920 /* Utitlites */,
 				3B148B8523EAD49E00839538 /* Animation */,
@@ -549,6 +561,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3B1A644823EDDE1300533F0F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				3B1A647123EE085800533F0F /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		3B1C310323E4915400C14138 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -837,13 +857,13 @@
 			isa = PBXGroup;
 			children = (
 				041E0ED823DEF2870034CE0F /* LaunchScreen.storyboard */,
-				3B12FEF223E0439700C7A75D /* Authentication.storyboard */,
-				3B21693D23DF1FB0008D4920 /* Nav.storyboard */,
+				3B1A645823EDEACB00533F0F /* Authentication.storyboard */,
+				3B1A645323EDE31F00533F0F /* Nav.storyboard */,
 				041E0ED323DEF2840034CE0F /* Main.storyboard */,
-				3B13E68B23E5AD2000D797AA /* SideMenu.storyboard */,
-				3B13E69923E5F63600D797AA /* MyAwfarli.storyboard */,
-				3B0DEA9223E9BE7700250EE2 /* SearchStoryboard.storyboard */,
-				3B148B9D23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard */,
+				3B1A645D23EDEF4C00533F0F /* SideMenu.storyboard */,
+				3B1A646223EDF2E600533F0F /* MyAwfarli.storyboard */,
+				3B1A646723EDF55C00533F0F /* SearchStoryboard.storyboard */,
+				3B1A646C23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -964,6 +984,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 041E0EC123DEF2840034CE0F;
 			productRefGroup = 041E0ECB23DEF2840034CE0F /* Products */;
@@ -985,21 +1006,22 @@
 				3B20D0A723EC232800734C6D /* welcome.json in Resources */,
 				3B13E69823E5D03500D797AA /* SideMenu.xcassets in Resources */,
 				3BC8FDFE23EB1ADE0083C284 /* TitleOfSectionTableViewCell.xib in Resources */,
-				3B13E69A23E5F63600D797AA /* MyAwfarli.storyboard in Resources */,
+				3B1A646023EDF2E600533F0F /* MyAwfarli.storyboard in Resources */,
 				3B148B8723EAD4B000839538 /* orderSuccess.json in Resources */,
-				3B0DEA9323E9BE7700250EE2 /* SearchStoryboard.storyboard in Resources */,
+				3B1A646523EDF55C00533F0F /* SearchStoryboard.storyboard in Resources */,
 				3B2ED3E923EC59F500AE2801 /* shop.json in Resources */,
 				3B2ED3EB23EC5A1500AE2801 /* cart.json in Resources */,
 				3BC8FDFC23EB1ADE0083C284 /* FAQTableViewCell.xib in Resources */,
 				041E0EDA23DEF2870034CE0F /* LaunchScreen.storyboard in Resources */,
-				3B12FEF323E0439700C7A75D /* Authentication.storyboard in Resources */,
-				3B148B9E23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard in Resources */,
+				3B1A646F23EE085800533F0F /* Localizable.strings in Resources */,
+				3B1A645623EDEACB00533F0F /* Authentication.storyboard in Resources */,
+				3B1A646A23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard in Resources */,
 				3B21698A23DF2913008D4920 /* Navigation.xcassets in Resources */,
 				3B1A644523EDA91500533F0F /* fav.json in Resources */,
 				3B21692723DF0489008D4920 /* Color.xcassets in Resources */,
-				3B13E68C23E5AD2000D797AA /* SideMenu.storyboard in Resources */,
+				3B1A645B23EDEF4C00533F0F /* SideMenu.storyboard in Resources */,
 				041E0ED723DEF2870034CE0F /* Assets.xcassets in Resources */,
-				3B21693E23DF1FB1008D4920 /* Nav.storyboard in Resources */,
+				3B1A645123EDE31F00533F0F /* Nav.storyboard in Resources */,
 				041E0ED523DEF2840034CE0F /* Main.storyboard in Resources */,
 				3B2ED3DF23EC447E00AE2801 /* seccess.json in Resources */,
 			);
@@ -1152,7 +1174,8 @@
 		041E0ED323DEF2840034CE0F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				041E0ED423DEF2840034CE0F /* Base */,
+				3B1A644F23EDE01C00533F0F /* Base */,
+				3B1A645023EDE10900533F0F /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1161,8 +1184,73 @@
 			isa = PBXVariantGroup;
 			children = (
 				041E0ED923DEF2870034CE0F /* Base */,
+				3B1A644623EDD81F00533F0F /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A645323EDE31F00533F0F /* Nav.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A645223EDE31F00533F0F /* Base */,
+				3B1A645523EDE32F00533F0F /* ar */,
+			);
+			name = Nav.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A645823EDEACB00533F0F /* Authentication.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A645723EDEACB00533F0F /* Base */,
+				3B1A645A23EDEAD300533F0F /* ar */,
+			);
+			name = Authentication.storyboard;
+			path = AwfarlakOriginal/StoryBoard;
+			sourceTree = SOURCE_ROOT;
+		};
+		3B1A645D23EDEF4C00533F0F /* SideMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A645C23EDEF4C00533F0F /* Base */,
+				3B1A645F23EDEF7F00533F0F /* ar */,
+			);
+			name = SideMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A646223EDF2E600533F0F /* MyAwfarli.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A646123EDF2E600533F0F /* Base */,
+				3B1A646423EDF2F000533F0F /* ar */,
+			);
+			name = MyAwfarli.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A646723EDF55C00533F0F /* SearchStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A646623EDF55C00533F0F /* Base */,
+				3B1A646923EDF56500533F0F /* ar */,
+			);
+			name = SearchStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A646C23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A646B23EDF62200533F0F /* Base */,
+				3B1A646E23EDF62E00533F0F /* ar */,
+			);
+			name = AboutAwfalakStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1A647123EE085800533F0F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1A647023EE085800533F0F /* en */,
+				3B1A647223EE085D00533F0F /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1172,6 +1260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1232,6 +1321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

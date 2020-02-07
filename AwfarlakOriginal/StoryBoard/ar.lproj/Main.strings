@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "You can now set off to begin your enjoyable\njourney to get everything you want"; ObjectID = "2hx-UW-qOR"; */
+"2hx-UW-qOR.text" = "يمكنك الآن الانطلاق لبدء رحلتك الممتعة للحصول على كل ما تريد .";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "BTU-5W-Ot6"; */
+"BTU-5W-Ot6.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "We are an e-shopping application that gives you an enjoyable journey to get to know our multiple and distinct products and different types of products to get you everything you want in an easy, convenient and safe way and at the lowest prices ."; ObjectID = "Jzf-Gg-R2y"; */
+"Jzf-Gg-R2y.text" = "نحن تطبيق تسوق إلكتروني يمنحك رحلة ممتعة للتعرف على منتجاتنا المتعددة والمتميزة وأنواع مختلفة من المنتجات لتحصل على كل ما تريده بطريقة سهلة ومريحة وآمنة وبأقل الأسعار .";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "QVV-cn-VNJ"; */
+"QVV-cn-VNJ.normalTitle" = "تخطي";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "Quz-KL-cyZ"; */
+"Quz-KL-cyZ.normalTitle" = "تخطي";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "SaG-ba-Pzj"; */
+"SaG-ba-Pzj.normalTitle" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = " As you browse our products, you can view the statistics about the product and its ratings, and you can add it to your favorites list for your reference at any time."; ObjectID = "c8K-GH-cc5"; */
+"c8K-GH-cc5.text" = " أثناء تصفح منتجاتنا ، يمكنك عرض الإحصائيات حول المنتج وتقييماته ، ويمكنك إضافته إلى قائمة المفضلة للرجوع اليها في أي وقت.";
+
+/* Class = "UIButton"; normalTitle = "ENJOY YOUR SHOPPING"; ObjectID = "tkB-HM-oyh"; */
+"tkB-HM-oyh.normalTitle" = "استمتع بالتسوق";
