@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class MyCartViewController: UIViewController {
     
@@ -16,23 +17,9 @@ class MyCartViewController: UIViewController {
             myCartTableView.rowHeight = 230
         }
     }
-    
     @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var completeOrderBtn: UIButton!{
-        didSet{
-            completeOrderBtn.layer.cornerRadius = completeOrderBtn.frame.size.height / 2
-            completeOrderBtn.clipsToBounds = true
-            completeOrderBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
-        }
-    }
-    
-    @IBOutlet weak var callBtn: UIButton!{
-        didSet{
-            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
-            callBtn.clipsToBounds = true
-            callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
-        }
-    }
+    @IBOutlet weak var completeOrderBtn: UIButton!
+    @IBOutlet weak var callBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
@@ -42,8 +29,30 @@ class MyCartViewController: UIViewController {
     }
     
     func updateViewDesign() {
-        totalPrice.attributedText = NSAttributedString.withDualText2(text1: "Rs.", ofSizeText1: 20, text2: "21.50", ofSizeText2: 20)
-        myCartAnimationFavView.isHidden = true
+        totalPrice.attributedText = NSAttributedString.withDualText2(text1: "rs".localized, ofSizeText1: 20, text2: "21.50", ofSizeText2: 20)
+          myCartAnimationFavView.isHidden = true
+         chkDesignBtn()
+        
+    }
+    
+    func chkDesignBtn()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            completeOrderBtn.layer.cornerRadius = completeOrderBtn.frame.size.height / 2
+            completeOrderBtn.clipsToBounds = true
+            completeOrderBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
+            callBtn.clipsToBounds = true
+            callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            completeOrderBtn.layer.cornerRadius = completeOrderBtn.frame.size.height / 2
+            completeOrderBtn.clipsToBounds = true
+            completeOrderBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
+            callBtn.clipsToBounds = true
+            callBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            
+        }
         
     }
     
@@ -70,6 +79,7 @@ extension MyCartViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartTableViewCell", for: indexPath) as! MyCartTableViewCell
         cell.oldPriceLbl.attributedText = "Rs.3.75/KG".strikeThrough()
+
         cell.delegate = self
         
         return cell

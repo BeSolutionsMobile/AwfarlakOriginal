@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MOLH
 
 class AwfarlakSideMenuViewController: UIViewController {
+    @IBOutlet  var profileArrowMenu:[UIImageView]!
     @IBOutlet weak var langView: UIView!{
         didSet{
             langView.layer.cornerRadius = self.langView.frame.height/2
@@ -47,11 +49,24 @@ class AwfarlakSideMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
        func updateViewDesign() {
-           
            CustomDesign.customCircleImage(image: profileView)
+        chackArrowLang()
+        
        }
     
-
+    func chackArrowLang()  {
+        let  number : Int = profileArrowMenu.count
+        for i in 0..<number{
+            if MOLHLanguage.currentAppleLanguage() == "en"{
+                profileArrowMenu[i].image = UIImage(named: "arrowMenu")
+                
+            }
+            else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+                profileArrowMenu[i].image = UIImage(named: "arrowMenuAr")
+            }
+        }
+        
+    }
 
     @IBAction func selectFromMenuBtnPressed(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: menuItem.controller1[sender.tag - 1] ) else { return  }

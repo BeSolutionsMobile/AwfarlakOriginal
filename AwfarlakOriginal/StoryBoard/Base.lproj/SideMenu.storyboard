@@ -94,7 +94,7 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="EMx-Gt-HmD">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="EMx-Gt-HmD">
                                                                                 <rect key="frame" x="339" y="0.0" width="15" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="30" id="b5d-TV-SLE"/>
@@ -137,7 +137,7 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-zB-Fc4">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BsD-zB-Fc4">
                                                                                 <rect key="frame" x="339" y="0.0" width="15" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="WIt-mW-U8j"/>
@@ -180,7 +180,7 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="egN-Gg-sIc">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="egN-Gg-sIc">
                                                                                 <rect key="frame" x="339" y="0.0" width="15" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="INs-Mm-TUg"/>
@@ -223,7 +223,7 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="im3-92-5H9">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="im3-92-5H9">
                                                                                 <rect key="frame" x="339" y="0.0" width="15" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="30" id="Y2f-sG-zs6"/>
@@ -266,7 +266,7 @@
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-pg-ZG7">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowMenu" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-pg-ZG7">
                                                                                 <rect key="frame" x="339" y="0.0" width="15" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="336-ZA-pVv"/>
@@ -665,6 +665,15 @@
                         <outlet property="profileName" destination="8vL-00-IOr" id="7TM-D0-6pq"/>
                         <outlet property="profileView" destination="YN1-vJ-Jrp" id="AZF-WL-kEU"/>
                         <outlet property="secondSide" destination="dBH-mX-qEJ" id="SiK-Wi-H3k"/>
+                        <outletCollection property="profileArrowMenu" destination="EMx-Gt-HmD" collectionClass="NSMutableArray" id="6at-T7-QlN"/>
+                        <outletCollection property="profileArrowMenu" destination="BsD-zB-Fc4" collectionClass="NSMutableArray" id="col-Rw-mek"/>
+                        <outletCollection property="profileArrowMenu" destination="egN-Gg-sIc" collectionClass="NSMutableArray" id="Ifb-q8-ei3"/>
+                        <outletCollection property="profileArrowMenu" destination="im3-92-5H9" collectionClass="NSMutableArray" id="k7I-0r-w2r"/>
+                        <outletCollection property="profileArrowMenu" destination="Cld-pg-ZG7" collectionClass="NSMutableArray" id="KeR-9R-Iqd"/>
+                        <outletCollection property="profileArrowMenu" destination="9eI-Ra-dhj" collectionClass="NSMutableArray" id="BY3-dG-Obe"/>
+                        <outletCollection property="profileArrowMenu" destination="H8e-ab-C6Q" collectionClass="NSMutableArray" id="aLG-Pt-gId"/>
+                        <outletCollection property="profileArrowMenu" destination="bNa-BU-I1L" collectionClass="NSMutableArray" id="PpK-SV-Zti"/>
+                        <outletCollection property="profileArrowMenu" destination="Unb-Vd-DfK" collectionClass="NSMutableArray" id="r6K-Ah-xAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yt-m4-1rl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
