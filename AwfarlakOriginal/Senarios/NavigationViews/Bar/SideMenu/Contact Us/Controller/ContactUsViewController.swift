@@ -11,8 +11,8 @@ import UIKit
 class ContactUsViewController: UIViewController {
     
     var contactIcon = ["ContactPhone" , "Contactemail" , "Contacthome"]
-    var contactTitle = ["Phone" , "Email" , "Address"]
-    var contactData = ["01008182062 - 01024439000 - 01004646198" , "Info@aufarleky1.com" , "No. 551 Tower 2 Arkan Plaza,Floor5, Bostan St., Zaied City, 6 October, Giza"]
+    var contactTitle = ["contectPhone".localized , "contectEmail".localized , "contectAddress".localized]
+    var contactData = ["01008182062 - 01024439000 - 01004646198" , "Info@aufarleky1.com" , "contectAddressDet".localized]
 
 
     @IBOutlet weak var contactUsTableView: UITableView!

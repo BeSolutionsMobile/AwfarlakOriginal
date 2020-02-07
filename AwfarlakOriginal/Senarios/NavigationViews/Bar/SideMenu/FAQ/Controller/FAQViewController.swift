@@ -52,7 +52,9 @@ extension FAQViewController : UITableViewDataSource , UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = Bundle.main.loadNibNamed("TitleOfSectionTableViewCell", owner: self, options: nil)?.first as! TitleOfSectionTableViewCell
-        sectionHeader.groupName.text = "Group \(section+1)"
+        sectionHeader.groupName.text = "Group".localized  +  String(section+1)
+      //  sectionHeader.groupName.text = "Group \(section+Int("Groupnumber".localized)! )".localized
+        //"Group \(section+1)")
         return sectionHeader
     }
 }
