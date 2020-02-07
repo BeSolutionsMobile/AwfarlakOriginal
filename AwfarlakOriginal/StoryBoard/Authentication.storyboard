@@ -848,13 +848,23 @@
                                             <constraint firstItem="7uG-a8-wD1" firstAttribute="centerY" secondItem="rLS-wV-ZpL" secondAttribute="centerY" id="sNo-rQ-Vlg"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9K-Kn-qAJ">
+                                        <rect key="frame" x="107" y="189" width="200" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="8Y8-kf-XfY"/>
+                                            <constraint firstAttribute="height" constant="200" id="jX7-Yu-b3i"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="rLS-wV-ZpL" firstAttribute="leading" secondItem="aJZ-o7-Ufl" secondAttribute="leading" id="6x5-Rg-oHB"/>
                                     <constraint firstItem="nhd-NI-RoD" firstAttribute="top" secondItem="aJZ-o7-Ufl" secondAttribute="top" constant="20" id="I3P-jO-1Nq"/>
                                     <constraint firstAttribute="trailing" secondItem="rLS-wV-ZpL" secondAttribute="trailing" id="c7D-ER-1nS"/>
+                                    <constraint firstItem="O9K-Kn-qAJ" firstAttribute="centerX" secondItem="aJZ-o7-Ufl" secondAttribute="centerX" id="gwT-dc-jZE"/>
                                     <constraint firstItem="rLS-wV-ZpL" firstAttribute="top" secondItem="nhd-NI-RoD" secondAttribute="bottom" id="h7m-61-82C"/>
+                                    <constraint firstItem="O9K-Kn-qAJ" firstAttribute="centerY" secondItem="aJZ-o7-Ufl" secondAttribute="centerY" id="mJj-5g-aGZ"/>
                                     <constraint firstItem="nhd-NI-RoD" firstAttribute="centerX" secondItem="aJZ-o7-Ufl" secondAttribute="centerX" id="mUB-fg-DJ5"/>
                                     <constraint firstAttribute="bottom" secondItem="rLS-wV-ZpL" secondAttribute="bottom" id="qza-jN-vyw"/>
                                 </constraints>
@@ -921,6 +931,7 @@
                         <outlet property="bigView" destination="lpD-LJ-rmC" id="d5N-xV-MqU"/>
                         <outlet property="headerImage" destination="O4d-t3-Rjw" id="7rb-Ew-Jwi"/>
                         <outlet property="headerView" destination="M9Z-Gx-Ykb" id="l19-ai-G2l"/>
+                        <outlet property="loginAnimation" destination="O9K-Kn-qAJ" id="R84-Qv-Ocv"/>
                         <outlet property="loginEmailTf" destination="m19-Cd-eyX" id="vGm-Ci-w3C"/>
                         <outlet property="loginPasswordTf" destination="ULe-gx-kD0" id="c9V-Xs-Nxa"/>
                         <outlet property="viewOpecity" destination="Fyz-3l-deh" id="UZO-rw-Tow"/>
@@ -947,7 +958,7 @@
             <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BtnColor">
-            <color red="0.9100000262260437" green="0.62400001287460327" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.90980392156862744" green="0.62352941176470589" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

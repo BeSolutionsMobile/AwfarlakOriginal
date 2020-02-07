@@ -9,7 +9,8 @@
 import UIKit
 import Cosmos
 class MyComparisonCollectionViewCell: UICollectionViewCell {
-    
+    var delegate: FavAnimationDelegate?
+
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productRate: CosmosView!
@@ -31,6 +32,8 @@ class MyComparisonCollectionViewCell: UICollectionViewCell {
     @IBAction func addFavBtnPressed(_ sender: UIButton) {
         if addFavBtn.image(for: .normal) == UIImage(named: "Fav1") {
             self.addFavBtn.setImage(UIImage(named: "Fav2"), for: .normal)
+            delegate?.startFavAnimation()
+
             
         }
         else if addFavBtn.image(for: .normal) == UIImage(named: "Fav2") {

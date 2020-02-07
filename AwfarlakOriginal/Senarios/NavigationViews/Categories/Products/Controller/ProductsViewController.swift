@@ -13,15 +13,22 @@ class ProductsViewController: UIViewController {
 
     var catName = ["Orange" , "Mango" , "Apple" , "Apple" , "Kiwi" , "Banana" , "Pineapple" , "Tomato" , "Strawberry" , "Grapes" ]
     @IBOutlet weak var productCollectionView: UICollectionView!
+    
+    @IBOutlet weak var productAnimationFav: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
+        updateDesign()
 
         // Do any additional setup after loading the view.
     }
     
-
-   
+    func updateDesign()  {
+        
+        productAnimationFav.isHidden = true
+        
+    }
+    
 
 }
 
@@ -36,7 +43,7 @@ extension ProductsViewController : UICollectionViewDelegate , UICollectionViewDa
         let cellIndex = indexPath.item
         cell.productImage.image = UIImage(named: catImage[cellIndex])
         cell.productName.text = catName[cellIndex]
-       
+        cell.delegate = self
         
         return cell
         
@@ -68,3 +75,21 @@ extension ProductsViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension ProductsViewController : FavAnimationDelegate {
+    func startFavAnimation() {
+        productAnimationFav.isHidden = false
+        let view = StartAnimationView.showLottie(view: self.productAnimationFav, fileName: "fav", contentMode: .scaleAspectFit)
+        view.animationSpeed = 0.8
+        view.play { (finished) in
+            if finished {
+               self.productAnimationFav.isHidden = true
+                
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+    }
+    
+    
+}

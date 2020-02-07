@@ -9,6 +9,7 @@
 import UIKit
 
 class MyComparisonViewController: UIViewController {
+    @IBOutlet weak var comparisionAnimationView: UIView!
     
     var ComparisonImage = ["Strawberry" , "Apple"]
     
@@ -18,11 +19,14 @@ class MyComparisonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
+         updateDesign()
         
         // Do any additional setup after loading the view.
     }
     
-    
+    func updateDesign()  {
+        comparisionAnimationView.isHidden = true
+    }
     @IBAction func finishComparisionBtnPressed(_ sender: UIButton) {
     }
     
@@ -39,6 +43,7 @@ extension MyComparisonViewController : UICollectionViewDelegate , UICollectionVi
         let cellIndex = indexPath.item
         cell.productImage.image  = UIImage(named: ComparisonImage[cellIndex])
         cell.productName.text = ComparisonName[cellIndex]
+        cell.delegate = self
         
         return cell
         
@@ -69,3 +74,23 @@ extension MyComparisonViewController : UICollectionViewDelegateFlowLayout {
 }
 
 
+
+
+extension MyComparisonViewController : FavAnimationDelegate {
+    func startFavAnimation() {
+        comparisionAnimationView.isHidden = false
+        let view = StartAnimationView.showLottie(view: self.comparisionAnimationView, fileName: "fav", contentMode: .scaleAspectFit)
+        view.animationSpeed = 0.8
+        view.play { (finished) in
+            if finished {
+               self.comparisionAnimationView.isHidden = true
+                
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+    }
+    
+    
+}

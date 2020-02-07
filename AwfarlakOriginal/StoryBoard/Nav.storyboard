@@ -325,18 +325,29 @@
                                     <outlet property="delegate" destination="ytP-tm-W2d" id="Xt2-BL-Uqw"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5G1-Nk-fdD">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="16a-Fk-f0P"/>
+                                    <constraint firstAttribute="width" constant="200" id="GIC-vz-tXW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5G1-Nk-fdD" firstAttribute="centerX" secondItem="ODi-e5-1P9" secondAttribute="centerX" id="J3U-nY-7ch"/>
                             <constraint firstAttribute="trailing" secondItem="1MZ-FL-Qkt" secondAttribute="trailing" id="UHO-lg-9dM"/>
                             <constraint firstItem="1MZ-FL-Qkt" firstAttribute="top" secondItem="ODi-e5-1P9" secondAttribute="top" id="W9w-45-YRe"/>
                             <constraint firstAttribute="bottom" secondItem="1MZ-FL-Qkt" secondAttribute="bottom" id="YAa-wj-g9t"/>
+                            <constraint firstItem="5G1-Nk-fdD" firstAttribute="centerY" secondItem="ODi-e5-1P9" secondAttribute="centerY" id="Z1J-DN-AtP"/>
                             <constraint firstItem="1MZ-FL-Qkt" firstAttribute="leading" secondItem="ODi-e5-1P9" secondAttribute="leading" id="gf5-Vt-K22"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfQ-yF-AN8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Products" id="HEA-nh-g3L"/>
                     <connections>
+                        <outlet property="productAnimationFav" destination="5G1-Nk-fdD" id="8sA-Pq-ha3"/>
                         <outlet property="productCollectionView" destination="1MZ-FL-Qkt" id="l7R-u3-gpU"/>
                     </connections>
                 </viewController>
@@ -1057,7 +1068,7 @@ Most of these species are found</string>
             <color red="0.91699999570846558" green="0.90200001001358032" blue="0.88400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BtnColor">
-            <color red="0.9100000262260437" green="0.62400001287460327" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.90980392156862744" green="0.62352941176470589" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="RateColor">
             <color red="0.25099998712539673" green="0.56400001049041748" blue="0.30399999022483826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     
     
     
+    @IBOutlet weak var loginAnimation: UIView!
     @IBOutlet var bigView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var viewOpecity: UIView!
@@ -34,6 +35,24 @@ class LoginViewController: UIViewController {
     }
     
     
+    func startAnimation(){
+       loginAnimation.isHidden = false
+        let view = StartAnimationView.showLottie(view: self.loginAnimation, fileName: "seccess", contentMode: .scaleAspectFit)
+        view.animationSpeed = 0.5
+        view.play { (finished) in
+            if finished {
+                self.loginAnimation.isHidden = true
+                if let vc = self.storyboard?.instantiateViewController(identifier: "MainNavigationController") as? MainNavigationController {
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+    }
+    
     
     func updateDesign()  {
         headerImage.layer.cornerRadius = self.bigView.bounds.height * 0.29
@@ -42,6 +61,8 @@ class LoginViewController: UIViewController {
         viewOpecity.layer.cornerRadius = self.bigView.bounds.height * 0.29
         viewOpecity.layer.masksToBounds = true
         viewOpecity.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
+        loginAnimation.isHidden = true
+
         
     }
     
@@ -66,10 +87,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "MainNavigationController") as? MainNavigationController {
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
-        }
+         startAnimation()
     }
     
 }

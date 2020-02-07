@@ -9,42 +9,47 @@
 import UIKit
 
 class MyCartViewController: UIViewController {
-
+    
+    @IBOutlet weak var myCartAnimationFavView: UIView!
     @IBOutlet weak var myCartTableView: UITableView!{
         didSet{
             myCartTableView.rowHeight = 230
+        }
     }
-}
     
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var completeOrderBtn: UIButton!{
         didSet{
-           completeOrderBtn.layer.cornerRadius = completeOrderBtn.frame.size.height / 2
-           completeOrderBtn.clipsToBounds = true
-           completeOrderBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            completeOrderBtn.layer.cornerRadius = completeOrderBtn.frame.size.height / 2
+            completeOrderBtn.clipsToBounds = true
+            completeOrderBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
         }
     }
     
     @IBOutlet weak var callBtn: UIButton!{
         didSet{
-           callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
-           callBtn.clipsToBounds = true
-           callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
+            callBtn.clipsToBounds = true
+            callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
-         updateViewDesign()
-
+        updateViewDesign()
+        
         // Do any additional setup after loading the view.
     }
     
     func updateViewDesign() {
-          totalPrice.attributedText = NSAttributedString.withDualText2(text1: "Rs.", ofSizeText1: 20, text2: "21.50", ofSizeText2: 20)
-      }
+        totalPrice.attributedText = NSAttributedString.withDualText2(text1: "Rs.", ofSizeText1: 20, text2: "21.50", ofSizeText2: 20)
+        myCartAnimationFavView.isHidden = true
+        
+    }
     
-
+    
+    
+    
     @IBAction func callBtnPressed(_ sender: UIButton) {
     }
     
@@ -52,7 +57,7 @@ class MyCartViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "OrderSuccessfulViewController") as! OrderSuccessfulViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
-
+        
         //navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -65,6 +70,7 @@ extension MyCartViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartTableViewCell", for: indexPath) as! MyCartTableViewCell
         cell.oldPriceLbl.attributedText = "Rs.3.75/KG".strikeThrough()
+        cell.delegate = self
         
         return cell
     }
@@ -72,11 +78,33 @@ extension MyCartViewController : UITableViewDelegate , UITableViewDataSource {
     
     
     //MARK:- didSelectRowAt
-      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-          
-      }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
     
+    
+    
+}
+
+
+
+
+extension MyCartViewController : FavAnimationDelegate {
+    func startFavAnimation() {
+        myCartAnimationFavView.isHidden = false
+        let view = StartAnimationView.showLottie(view: self.myCartAnimationFavView, fileName: "fav", contentMode: .scaleAspectFit)
+        view.animationSpeed = 0.8
+        view.play { (finished) in
+            if finished {
+                self.myCartAnimationFavView.isHidden = true
+                
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+    }
     
     
 }

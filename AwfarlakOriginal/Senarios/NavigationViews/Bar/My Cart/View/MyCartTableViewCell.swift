@@ -9,6 +9,8 @@
 import UIKit
 import Cosmos
 class MyCartTableViewCell: UITableViewCell {
+    var delegate: FavAnimationDelegate?
+
     var quantity : Int = 1
     @IBOutlet weak var cornerView: UIView!{
         didSet{
@@ -72,6 +74,8 @@ class MyCartTableViewCell: UITableViewCell {
     @IBAction func favBtnPressed(_ sender: UIButton) {
         if favBtn.image(for: .normal) == UIImage(named: "Fav1") {
             self.favBtn.setImage(UIImage(named: "Fav2"), for: .normal)
+            delegate?.startFavAnimation()
+
             
         }
         else if favBtn.image(for: .normal) == UIImage(named: "Fav2") {

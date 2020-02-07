@@ -42,6 +42,7 @@
 		3B148B9C23EAF0FE00839538 /* ContactUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B148B9B23EAF0FE00839538 /* ContactUsTableViewCell.swift */; };
 		3B148B9E23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B148B9D23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard */; };
 		3B176EC323E6F21A00C89661 /* MyCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B176EC223E6F21A00C89661 /* MyCartTableViewCell.swift */; };
+		3B1A644523EDA91500533F0F /* fav.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A644423EDA91400533F0F /* fav.json */; };
 		3B1C310723E4918500C14138 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310623E4918500C14138 /* ProductsViewController.swift */; };
 		3B1C310923E491B000C14138 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */; };
 		3B1C310D23E4C4EA00C14138 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */; };
@@ -64,7 +65,6 @@
 		3B21697A23DF2689008D4920 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21695323DF2688008D4920 /* MainNavigationController.swift */; };
 		3B21697B23DF2689008D4920 /* SSBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21695423DF2688008D4920 /* SSBadgeButton.swift */; };
 		3B21698A23DF2913008D4920 /* Navigation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B21698923DF2913008D4920 /* Navigation.xcassets */; };
-		3B2ED3DD23EC447E00AE2801 /* fav.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ED3DA23EC447D00AE2801 /* fav.json */; };
 		3B2ED3DF23EC447E00AE2801 /* seccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ED3DC23EC447E00AE2801 /* seccess.json */; };
 		3B2ED3E723EC4CE800AE2801 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2ED3E623EC4CE800AE2801 /* SecondViewController.swift */; };
 		3B2ED3E923EC59F500AE2801 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ED3E823EC59F500AE2801 /* shop.json */; };
@@ -137,6 +137,7 @@
 		3B148B9B23EAF0FE00839538 /* ContactUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsTableViewCell.swift; sourceTree = "<group>"; };
 		3B148B9D23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAwfalakStoryboard.storyboard; sourceTree = "<group>"; };
 		3B176EC223E6F21A00C89661 /* MyCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartTableViewCell.swift; sourceTree = "<group>"; };
+		3B1A644423EDA91400533F0F /* fav.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fav.json; sourceTree = "<group>"; };
 		3B1C310623E4918500C14138 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +160,6 @@
 		3B21695323DF2688008D4920 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3B21695423DF2688008D4920 /* SSBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBadgeButton.swift; sourceTree = "<group>"; };
 		3B21698923DF2913008D4920 /* Navigation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Navigation.xcassets; sourceTree = "<group>"; };
-		3B2ED3DA23EC447D00AE2801 /* fav.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fav.json; sourceTree = "<group>"; };
 		3B2ED3DC23EC447E00AE2801 /* seccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seccess.json; sourceTree = "<group>"; };
 		3B2ED3E623EC4CE800AE2801 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3B2ED3E823EC59F500AE2801 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
@@ -477,7 +477,7 @@
 				3B2ED3E823EC59F500AE2801 /* shop.json */,
 				3B20D0A623EC232800734C6D /* welcome.json */,
 				3B2ED3EA23EC5A1500AE2801 /* cart.json */,
-				3B2ED3DA23EC447D00AE2801 /* fav.json */,
+				3B1A644423EDA91400533F0F /* fav.json */,
 				3B2ED3DC23EC447E00AE2801 /* seccess.json */,
 			);
 			path = Animation;
@@ -995,13 +995,13 @@
 				3B12FEF323E0439700C7A75D /* Authentication.storyboard in Resources */,
 				3B148B9E23EAF5AB00839538 /* AboutAwfalakStoryboard.storyboard in Resources */,
 				3B21698A23DF2913008D4920 /* Navigation.xcassets in Resources */,
+				3B1A644523EDA91500533F0F /* fav.json in Resources */,
 				3B21692723DF0489008D4920 /* Color.xcassets in Resources */,
 				3B13E68C23E5AD2000D797AA /* SideMenu.storyboard in Resources */,
 				041E0ED723DEF2870034CE0F /* Assets.xcassets in Resources */,
 				3B21693E23DF1FB1008D4920 /* Nav.storyboard in Resources */,
 				041E0ED523DEF2840034CE0F /* Main.storyboard in Resources */,
 				3B2ED3DF23EC447E00AE2801 /* seccess.json in Resources */,
-				3B2ED3DD23EC447E00AE2801 /* fav.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

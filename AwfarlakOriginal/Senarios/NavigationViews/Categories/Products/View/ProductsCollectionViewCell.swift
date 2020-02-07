@@ -8,8 +8,12 @@
 
 import UIKit
 import Cosmos
-
+protocol FavAnimationDelegate {
+    func startFavAnimation()
+}
 class ProductsCollectionViewCell: UICollectionViewCell {
+    var delegate: FavAnimationDelegate?
+
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var discountView: UIView!
@@ -42,6 +46,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     @IBAction func favBtnPressed(_ sender: UIButton) {
         if favBtn.image(for: .normal) == UIImage(named: "Fav1") {
             self.favBtn.setImage(UIImage(named: "Fav2"), for: .normal)
+            delegate?.startFavAnimation()
             
         }
         else if favBtn.image(for: .normal) == UIImage(named: "Fav2") {
