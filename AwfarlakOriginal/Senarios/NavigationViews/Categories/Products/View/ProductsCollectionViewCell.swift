@@ -8,12 +8,18 @@
 
 import UIKit
 import Cosmos
+import MOLH
 protocol FavAnimationDelegate {
     func startFavAnimation()
 }
 class ProductsCollectionViewCell: UICollectionViewCell {
     var delegate: FavAnimationDelegate?
 
+    @IBOutlet weak var discountImageBg: UIImageView!{
+        didSet{
+            chkDesignBtn()
+        }
+    }
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var discountView: UIView!
@@ -30,7 +36,17 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     
     
     
-    
+    func chkDesignBtn()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            discountImageBg.image = UIImage(named: "DiscountBg")
+            
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            discountImageBg.image = UIImage(named: "DiscountBgAr")
+
+        }
+        
+    }
     
     
     

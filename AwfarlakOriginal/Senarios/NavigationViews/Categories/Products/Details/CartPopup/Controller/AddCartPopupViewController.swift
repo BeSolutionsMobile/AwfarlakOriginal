@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MOLH
 class AddCartPopupViewController: UIViewController {
     
     var quantity : Int = 1
@@ -37,13 +37,7 @@ class AddCartPopupViewController: UIViewController {
         }
     }
     @IBOutlet weak var viewOfAppIcon: UIView!
-    @IBOutlet weak var productPrice: UILabel!{
-        didSet{
-           productPrice.layer.cornerRadius = productPrice.frame.size.height / 2
-           productPrice.clipsToBounds = true
-           productPrice.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
-        }
-    }
+    @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var quantityLbl: UILabel!
     
     override func viewDidLoad() {
@@ -65,6 +59,24 @@ class AddCartPopupViewController: UIViewController {
         
         CustomDesign.customCircleImage(image: popupImage)
         CustomDesign.cricleViewDesign(view: viewOfAppIcon)
+        chkDesignBtn()
+    }
+    
+    
+    
+    func chkDesignBtn()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+           productPrice.layer.cornerRadius = productPrice.frame.size.height / 2
+            productPrice.clipsToBounds = true
+            productPrice.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+           productPrice.layer.cornerRadius = productPrice.frame.size.height / 2
+           productPrice.clipsToBounds = true
+           productPrice.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            
+        }
+        
     }
     
     

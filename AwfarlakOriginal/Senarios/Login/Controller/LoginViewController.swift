@@ -38,7 +38,6 @@ class LoginViewController: UIViewController {
     func startAnimation(){
        loginAnimation.isHidden = false
         let view = StartAnimationView.showLottie(view: self.loginAnimation, fileName: "seccess", contentMode: .scaleAspectFit)
-        view.animationSpeed = 0.5
         view.play { (finished) in
             if finished {
                 self.loginAnimation.isHidden = true

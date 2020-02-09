@@ -137,25 +137,25 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tN-jv-fVz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscountBg" translatesAutoresizingMaskIntoConstraints="NO" id="wnw-bf-aGJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="32"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-KU-F8v">
-                                                            <rect key="frame" x="2" y="7" width="17" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                            <rect key="frame" x="2" y="5.5" width="21" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8As-2L-rCi">
-                                                            <rect key="frame" x="21" y="0.5" width="12" height="17"/>
+                                                            <rect key="frame" x="25" y="0.5" width="12" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-E9-GEu">
-                                                            <rect key="frame" x="20.5" y="17" width="11" height="8.5"/>
+                                                            <rect key="frame" x="24.5" y="17" width="11" height="8.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="7"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -168,7 +168,7 @@
                                                         <constraint firstItem="8As-2L-rCi" firstAttribute="centerY" secondItem="9mw-KU-F8v" secondAttribute="centerY" constant="-7" id="CN9-mZ-fVv"/>
                                                         <constraint firstItem="9mw-KU-F8v" firstAttribute="leading" secondItem="6tN-jv-fVz" secondAttribute="leading" constant="2" id="Jp5-Ax-aKV"/>
                                                         <constraint firstAttribute="bottom" secondItem="wnw-bf-aGJ" secondAttribute="bottom" id="Pze-Gt-CTo"/>
-                                                        <constraint firstAttribute="width" constant="40" id="Tpj-VK-gMQ"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Tpj-VK-gMQ"/>
                                                         <constraint firstItem="wnw-bf-aGJ" firstAttribute="top" secondItem="6tN-jv-fVz" secondAttribute="top" id="WF6-VJ-Oog"/>
                                                         <constraint firstItem="EOz-E9-GEu" firstAttribute="centerX" secondItem="8As-2L-rCi" secondAttribute="centerX" constant="-1" id="ZEW-RQ-nOZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="wnw-bf-aGJ" secondAttribute="trailing" id="dLx-Gf-KQr"/>
@@ -311,6 +311,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="discountImageBg" destination="wnw-bf-aGJ" id="jge-mX-JpD"/>
                                             <outlet property="discountView" destination="6tN-jv-fVz" id="xL6-im-Gbk"/>
                                             <outlet property="favBtn" destination="gSd-xl-JjQ" id="8ha-fM-McQ"/>
                                             <outlet property="numberOfBuyers" destination="eCN-N8-5Ed" id="wQE-hz-SyE"/>
@@ -354,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtF-v3-eLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="48"/>
+            <point key="canvasLocation" x="1839" y="48"/>
         </scene>
         <!--Mango-->
         <scene sceneID="sH2-X9-Ph0">
@@ -1057,13 +1058,13 @@ Most of these species are found</string>
         <image name="popupImage" width="1920" height="1280"/>
         <image name="productDetails" width="21" height="21"/>
         <namedColor name="BgBarNavigationColor">
-            <color red="0.89800000190734863" green="0.67500001192092896" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.89803921568627454" green="0.67450980392156867" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BgCollectionColor">
             <color red="0.91699999570846558" green="0.90200001001358032" blue="0.88400000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BtnColor">
-            <color red="0.90980392156862744" green="0.62352941176470589" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9100000262260437" green="0.62400001287460327" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="RateColor">
             <color red="0.25099998712539673" green="0.56400001049041748" blue="0.30399999022483826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

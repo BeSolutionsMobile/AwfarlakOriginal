@@ -80,6 +80,15 @@ class AwfarlakSideMenuViewController: UIViewController {
     }
     
     @IBAction func changeLangBtnPressed(_ sender: UIButton) {
+        
+        MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+        if #available(iOS 13.0, *) {
+                let delegate = UIApplication.shared.delegate as? AppDelegate
+                delegate!.swichRoot()
+        } else {
+               // Fallback on earlier versions
+               MOLH.reset()
+        }
     }
     
 }

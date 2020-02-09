@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import MOLH
 
 
 class ProductDetailsViewController: UIViewController {
@@ -39,21 +40,8 @@ class ProductDetailsViewController: UIViewController {
     
     
     @IBOutlet weak var viewChoise: UIView!
-    @IBOutlet weak var callBtn: UIButton!{
-        didSet{
-           callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
-           callBtn.clipsToBounds = true
-           callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
-        }
-    }
-    @IBOutlet weak var addCartBtn: UIButton!{
-        didSet{
-           addCartBtn.layer.cornerRadius = addCartBtn.frame.size.height / 2
-           addCartBtn.clipsToBounds = true
-           addCartBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
-        }
-    }
-    
+    @IBOutlet weak var callBtn: UIButton!
+    @IBOutlet weak var addCartBtn: UIButton!
     
     
     override func viewDidLoad() {
@@ -72,6 +60,35 @@ class ProductDetailsViewController: UIViewController {
         self.currentViewController?.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChild(self.currentViewController!)
         self.addSubview(subView: self.currentViewController!.view, toView: self.viewChoise)
+        chkDesignBtn()
+    }
+    
+    
+    func chkDesignBtn()  {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            addCartBtn.layer.cornerRadius = addCartBtn.frame.size.height / 2
+            addCartBtn.clipsToBounds = true
+            addCartBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
+            callBtn.clipsToBounds = true
+            callBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+            priceProduct.layer.cornerRadius = priceProduct.frame.size.height / 2
+            priceProduct.clipsToBounds = true
+            priceProduct.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+        }
+        else if  MOLHLanguage.currentAppleLanguage() == "ar"{
+            addCartBtn.layer.cornerRadius = addCartBtn.frame.size.height / 2
+            addCartBtn.clipsToBounds = true
+            addCartBtn.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+            callBtn.layer.cornerRadius = callBtn.frame.size.height / 2
+            callBtn.clipsToBounds = true
+            callBtn.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner  ]
+            priceProduct.layer.cornerRadius = priceProduct.frame.size.height / 2
+            priceProduct.clipsToBounds = true
+            priceProduct.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner  ]
+            
+        }
+        
     }
     
       func designSliderImage(imageSilder : ImageSlideshow) {

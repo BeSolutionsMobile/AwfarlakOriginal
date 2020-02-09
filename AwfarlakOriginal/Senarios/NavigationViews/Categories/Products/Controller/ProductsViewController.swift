@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MOLH
 
 class ProductsViewController: UIViewController {
+    
     var catImage = ["Orange" , "Mango" , "Apple2" , "Apple" , "Kiwi" , "Banana" , "Pineapple" , "Tomato" , "Strawberry" , "Grapes"]
 
     var catName = ["Orange" , "Mango" , "Apple" , "Apple" , "Kiwi" , "Banana" , "Pineapple" , "Tomato" , "Strawberry" , "Grapes" ]
+    
     @IBOutlet weak var productCollectionView: UICollectionView!
     
     @IBOutlet weak var productAnimationFav: UIView!
@@ -24,10 +27,9 @@ class ProductsViewController: UIViewController {
     }
     
     func updateDesign()  {
-        
         productAnimationFav.isHidden = true
-        
     }
+    
     
 
 }
