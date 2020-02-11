@@ -97,7 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041E0ECA23DEF2840034CE0F /* AwfarlakOriginal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwfarlakOriginal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041E0ECA23DEF2840034CE0F /* Awfarlak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awfarlak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041E0ECD23DEF2840034CE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041E0ECF23DEF2840034CE0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		041E0ED123DEF2840034CE0F /* AwfarlakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwfarlakViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		041E0ECB23DEF2840034CE0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				041E0ECA23DEF2840034CE0F /* AwfarlakOriginal.app */,
+				041E0ECA23DEF2840034CE0F /* Awfarlak.app */,
 				041E0EE023DEF2870034CE0F /* AwfarlakOriginalTests.xctest */,
 				041E0EEB23DEF2870034CE0F /* AwfarlakOriginalUITests.xctest */,
 			);
@@ -915,7 +915,7 @@
 			);
 			name = AwfarlakOriginal;
 			productName = AwfarlakOriginal;
-			productReference = 041E0ECA23DEF2840034CE0F /* AwfarlakOriginal.app */;
+			productReference = 041E0ECA23DEF2840034CE0F /* Awfarlak.app */;
 			productType = "com.apple.product-type.application";
 		};
 		041E0EDF23DEF2870034CE0F /* AwfarlakOriginalTests */ = {
@@ -1384,8 +1384,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.AwfarlakOriginal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.Awfarlak;
+				PRODUCT_NAME = Awfarlak;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1403,8 +1403,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.AwfarlakOriginal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.Awfarlak;
+				PRODUCT_NAME = Awfarlak;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
