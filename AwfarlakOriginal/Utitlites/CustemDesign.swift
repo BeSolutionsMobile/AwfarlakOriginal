@@ -42,6 +42,18 @@ class CustomDesign {
         
     }
     
+    static func validateNotDone(textField : UITextField ,numberOfShakes shakes: Float, revert: Bool) {
+        let shake: CABasicAnimation = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.07
+        shake.repeatCount = shakes
+        if revert { shake.autoreverses = true } else { shake.autoreverses = false }
+        shake.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 10, y: textField.center.y))
+        shake.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 10, y: textField.center.y))
+        textField.layer.add(shake, forKey: "position")
+    }
+    
+    
+    
     
     
 }

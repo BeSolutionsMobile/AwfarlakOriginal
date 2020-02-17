@@ -71,6 +71,14 @@
 		3B2ED3E923EC59F500AE2801 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ED3E823EC59F500AE2801 /* shop.json */; };
 		3B2ED3EB23EC5A1500AE2801 /* cart.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ED3EA23EC5A1500AE2801 /* cart.json */; };
 		3B2ED3EF23EC64FB00AE2801 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2ED3EE23EC64FB00AE2801 /* ThirdViewController.swift */; };
+		3B36702F23F826B700FC3DF3 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36702E23F826B700FC3DF3 /* Register.swift */; };
+		3B36703123F82FE900FC3DF3 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36703023F82FE900FC3DF3 /* Failure.swift */; };
+		3B6FD38923F99860003F0056 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FD38623F9985F003F0056 /* Request.swift */; };
+		3B6FD38A23F99860003F0056 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FD38723F9985F003F0056 /* Services.swift */; };
+		3B6FD38B23F99860003F0056 /* URLs .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FD38823F9985F003F0056 /* URLs .swift */; };
+		3B6FD38E23F99B5F003F0056 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6FD38D23F99B5F003F0056 /* Login.swift */; };
+		3B98C2C223FAF01B0012A627 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98C2C123FAF01B0012A627 /* UserDefault.swift */; };
+		3B98C2C523FB19D60012A627 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98C2C423FB19D60012A627 /* ForgetPassword.swift */; };
 		3BC8FDFB23EB1ADE0083C284 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FDF723EB1ADD0083C284 /* FAQTableViewCell.swift */; };
 		3BC8FDFC23EB1ADE0083C284 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC8FDF823EB1ADD0083C284 /* FAQTableViewCell.xib */; };
 		3BC8FDFD23EB1ADE0083C284 /* TitleOfSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8FDF923EB1ADD0083C284 /* TitleOfSectionTableViewCell.swift */; };
@@ -176,6 +184,14 @@
 		3B2ED3E823EC59F500AE2801 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
 		3B2ED3EA23EC5A1500AE2801 /* cart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cart.json; sourceTree = "<group>"; };
 		3B2ED3EE23EC64FB00AE2801 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		3B36702E23F826B700FC3DF3 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		3B36703023F82FE900FC3DF3 /* Failure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
+		3B6FD38623F9985F003F0056 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3B6FD38723F9985F003F0056 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		3B6FD38823F9985F003F0056 /* URLs .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLs .swift"; sourceTree = "<group>"; };
+		3B6FD38D23F99B5F003F0056 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3B98C2C123FAF01B0012A627 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		3B98C2C423FB19D60012A627 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		3BC8FDF723EB1ADD0083C284 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		3BC8FDF823EB1ADD0083C284 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		3BC8FDF923EB1ADD0083C284 /* TitleOfSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleOfSectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +253,7 @@
 		041E0ECC23DEF2840034CE0F /* AwfarlakOriginal */ = {
 			isa = PBXGroup;
 			children = (
+				3B6FD38523F9985F003F0056 /* Network Layer */,
 				3B1A644823EDDE1300533F0F /* Localizable */,
 				3BDB047423E33D100052FCDD /* Core */,
 				3B21692823DF06C2008D4920 /* Utitlites */,
@@ -699,6 +716,7 @@
 				3B21692C23DF06C2008D4920 /* CustemDesign.swift */,
 				3B21692D23DF06C2008D4920 /* DesignableUITextField.swift */,
 				3B148B8823EAD6FA00839538 /* StartAnimationView.swift */,
+				3B98C2C123FAF01B0012A627 /* UserDefault.swift */,
 				3B21693923DF074D008D4920 /* CusstomButton.swift */,
 				3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */,
 			);
@@ -756,6 +774,40 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		3B36702D23F826A700FC3DF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B36702E23F826B700FC3DF3 /* Register.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B6FD38523F9985F003F0056 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				3B6FD38723F9985F003F0056 /* Services.swift */,
+				3B6FD38623F9985F003F0056 /* Request.swift */,
+				3B6FD38823F9985F003F0056 /* URLs .swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		3B6FD38C23F99B4C003F0056 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B6FD38D23F99B5F003F0056 /* Login.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B98C2C323FB19270012A627 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B98C2C423FB19D60012A627 /* ForgetPassword.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3BC8FDF623EB1ADD0083C284 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,9 +819,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3BDAB63823F9A068000C9336 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B36703023F82FE900FC3DF3 /* Failure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3BDB046823E332C80052FCDD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3B6FD38C23F99B4C003F0056 /* Model */,
 				3BDB046923E332D20052FCDD /* Controller */,
 				3BDB046D23E333150052FCDD /* ForgotPassword */,
 			);
@@ -787,6 +848,7 @@
 		3BDB046B23E332F50052FCDD /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				3B36702D23F826A700FC3DF3 /* Model */,
 				3BDB046C23E333040052FCDD /* Controller */,
 			);
 			path = Register;
@@ -803,6 +865,7 @@
 		3BDB046D23E333150052FCDD /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				3B98C2C323FB19270012A627 /* Model */,
 				3BDB046E23E3332E0052FCDD /* Controller */,
 			);
 			path = ForgotPassword;
@@ -819,6 +882,7 @@
 		3BDB046F23E333650052FCDD /* Awfarlak */ = {
 			isa = PBXGroup;
 			children = (
+				3BDAB63823F9A068000C9336 /* Model */,
 				3BDB047023E3337B0052FCDD /* Controller */,
 			);
 			path = Awfarlak;
@@ -1090,10 +1154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6FD38B23F99860003F0056 /* URLs .swift in Sources */,
 				3BC8FDFD23EB1ADE0083C284 /* TitleOfSectionTableViewCell.swift in Sources */,
 				3B1C5BF423E854D8008DBA3B /* CommentsSegmentedViewController.swift in Sources */,
 				3B148B9323EAF09000839538 /* AboutUsViewController.swift in Sources */,
 				3B2ED3E723EC4CE800AE2801 /* SecondViewController.swift in Sources */,
+				3B98C2C523FB19D60012A627 /* ForgetPassword.swift in Sources */,
+				3B36702F23F826B700FC3DF3 /* Register.swift in Sources */,
 				3B13E6A523E5F7E500D797AA /* MyFavouriteViewController.swift in Sources */,
 				3B21693323DF06C2008D4920 /* Colortext.swift in Sources */,
 				3B1C310923E491B000C14138 /* ProductsCollectionViewCell.swift in Sources */,
@@ -1111,7 +1178,9 @@
 				3B13E69523E5AFDA00D797AA /* AwfarlakSideMenuViewController.swift in Sources */,
 				3B21697B23DF2689008D4920 /* SSBadgeButton.swift in Sources */,
 				3B1C310723E4918500C14138 /* ProductsViewController.swift in Sources */,
+				3B36703123F82FE900FC3DF3 /* Failure.swift in Sources */,
 				3B21693423DF06C2008D4920 /* CustemDesign.swift in Sources */,
+				3B6FD38E23F99B5F003F0056 /* Login.swift in Sources */,
 				3B2ED3EF23EC64FB00AE2801 /* ThirdViewController.swift in Sources */,
 				3B1C311123E4EEB400C14138 /* AddCartPopupViewController.swift in Sources */,
 				3B21693123DF06C2008D4920 /* Alert.swift in Sources */,
@@ -1121,9 +1190,11 @@
 				3B21697A23DF2689008D4920 /* MainNavigationController.swift in Sources */,
 				3B148B8023EABF7400839538 /* MyFavouriteCollectionViewCell.swift in Sources */,
 				3B12FEF523E04A4E00C7A75D /* RegisterViewController.swift in Sources */,
+				3B6FD38A23F99860003F0056 /* Services.swift in Sources */,
 				3B148B9A23EAF0E800839538 /* ContactUsViewController.swift in Sources */,
 				041E0ED023DEF2840034CE0F /* SceneDelegate.swift in Sources */,
 				3B20D0A423EC1EFC00734C6D /* FristViewController.swift in Sources */,
+				3B6FD38923F99860003F0056 /* Request.swift in Sources */,
 				3BDB047223E334CC0052FCDD /* ForgotPasswordViewController.swift in Sources */,
 				3B148B8923EAD6FB00839538 /* StartAnimationView.swift in Sources */,
 				3B21693A23DF074E008D4920 /* CusstomButton.swift in Sources */,
@@ -1132,6 +1203,7 @@
 				3B176EC323E6F21A00C89661 /* MyCartTableViewCell.swift in Sources */,
 				3B1C5BED23E826A3008DBA3B /* MyComparisonCollectionViewCell.swift in Sources */,
 				3B13E6A723E5F80E00D797AA /* MyCartViewController.swift in Sources */,
+				3B98C2C223FAF01B0012A627 /* UserDefault.swift in Sources */,
 				3B21693223DF06C2008D4920 /* CardView.swift in Sources */,
 				3B148B9C23EAF0FE00839538 /* ContactUsTableViewCell.swift in Sources */,
 				3B11F0E123E2E039003FB6B0 /* CategoriesViewController.swift in Sources */,

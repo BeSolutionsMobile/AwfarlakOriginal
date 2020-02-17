@@ -11,7 +11,7 @@
         <!--Frist View Controller-->
         <scene sceneID="I2C-6r-U2g">
             <objects>
-                <viewController storyboardIdentifier="FristViewController" id="T3s-a9-tUM" customClass="FristViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FristViewController" id="T3s-a9-tUM" customClass="FristViewController" customModule="Awfarlak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8yE-hY-K1t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
         <!--Second View Controller-->
         <scene sceneID="lzN-af-2gc">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="YFg-4S-roG" customClass="SecondViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="YFg-4S-roG" customClass="SecondViewController" customModule="Awfarlak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8m-bf-TAV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,7 +363,7 @@
         <!--Third View Controller-->
         <scene sceneID="pBi-5L-chj">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="75X-4p-adJ" customClass="ThirdViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="75X-4p-adJ" customClass="ThirdViewController" customModule="Awfarlak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e4a-Y2-0Kr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,7 +528,7 @@ journey to get everything you want</string>
         <!--Awfarlak View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AwfarlakViewController" id="BYZ-38-t0r" customClass="AwfarlakViewController" customModule="AwfarlakOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AwfarlakViewController" id="BYZ-38-t0r" customClass="AwfarlakViewController" customModule="Awfarlak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -548,7 +548,7 @@ journey to get everything you want</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="8gL-9L-Q04">
                                                 <rect key="frame" x="30" y="122.5" width="354" height="114"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-5W-Ot6" customClass="CusstomButton" customModule="AwfarlakOriginal" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-5W-Ot6" customClass="CusstomButton" customModule="Awfarlak" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
                                                         <color key="backgroundColor" name="BtnColor"/>
                                                         <constraints>
@@ -562,7 +562,7 @@ journey to get everything you want</string>
                                                             <action selector="logInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHe-F8-y8R"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-ba-Pzj" customClass="CusstomButton" customModule="AwfarlakOriginal" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-ba-Pzj" customClass="CusstomButton" customModule="Awfarlak" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="74" width="354" height="40"/>
                                                         <color key="backgroundColor" name="BtnColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -667,7 +667,7 @@ journey to get everything you want</string>
             <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BtnColor">
-            <color red="0.90980392156862744" green="0.62352941176470589" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9100000262260437" green="0.62400001287460327" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

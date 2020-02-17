@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
+    //MARK: - IBOutlet
     
     @IBOutlet weak var loginAnimation: UIView!
     @IBOutlet var bigView: UIView!
@@ -19,15 +19,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var loginEmailTf: UITextField!{
         didSet{
-           loginEmailTf.delegate = self
+            loginEmailTf.isSecureTextEntry = false
+            loginEmailTf.delegate = self
+
         }
     }
     @IBOutlet weak var loginPasswordTf: UITextField!{
         didSet{
-           loginPasswordTf.delegate = self
-           loginPasswordTf.isSecureTextEntry = true
+            loginPasswordTf.delegate = self
         }
     }
+    
+    //MARK: - Variables
+    
+    var login : Login?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +40,91 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    
+    
+    
+    
+    //MARK: - Func to  Update Design
+    
+    func updateDesign()  {
+        headerImage.layer.cornerRadius = self.bigView.bounds.height * 0.29
+        headerImage.layer.masksToBounds = true
+        headerImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
+        viewOpecity.layer.cornerRadius = self.bigView.bounds.height * 0.29
+        viewOpecity.layer.masksToBounds = true
+        viewOpecity.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
+        loginAnimation.isHidden = true
+        
+        
+    }
+    
+    //MARK: - Func to Login
+    
+    func getLogin()  {
+        if validateLoginTfEmpty() {
+            Services.login(email: loginEmailTf.text!, password: loginPasswordTf.text!, callback: { (result) in
+                print(result)
+                self.login = result
+                self.clearText()
+                self.setData()
+                self.startAnimation()
+            }) { (error) in
+                self.incorrectEmailOrPassword()
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
+    
+    //MARK: - Func to incorrect Email or Password
+    
+    func incorrectEmailOrPassword() {
+        CustomDesign.validateNotDone(textField: loginEmailTf, numberOfShakes: 3, revert: true)
+        CustomDesign.validateNotDone(textField: loginPasswordTf, numberOfShakes: 3, revert: true)
+        Alert.show("Error".localized, massege: "LoginMsg3".localized, context: self)
+    }
+    
+    
+    
+    //MARK: - Func to Validation of Login Text Field Is Empty Or Not
+    
+    func validateLoginTfEmpty()->Bool {
+        if let email = loginEmailTf.text , !email.isEmpty {
+            if let pass = loginPasswordTf.text , !pass.isEmpty{
+                return true
+            }else{
+                CustomDesign.validateNotDone(textField: loginPasswordTf, numberOfShakes: 3, revert: true)
+                Alert.show("Error".localized, massege: "LoginMsg2".localized, context: self)
+                return false
+            }
+        }else {
+            CustomDesign.validateNotDone(textField: loginEmailTf, numberOfShakes: 3, revert: true)
+            Alert.show("Error".localized, massege: "LoginMsg1".localized, context: self)
+            return false
+        }
+    }
+    
+    //MARK: - Func to Set Date in UserDafault
+    
+    func setData() {
+        UserDefault.setId((self.login?.userData.id)!)
+        UserDefault.setName((self.login?.userData.name)!)
+        UserDefault.setEmail((self.login?.userData.mail)!)
+        UserDefault.setPhone((self.login?.userData.phone)!)
+    }
+    
+    //MARK: - Func to Empty TextFaild
+    
+    func clearText()  {
+        loginEmailTf.text = ""
+        loginPasswordTf.text = ""
+    }
+    
+    //MARK: - Func to Start Animation And Transfer To Main Home Page
+    
     func startAnimation(){
-       loginAnimation.isHidden = false
+        loginAnimation.isHidden = false
         let view = StartAnimationView.showLottie(view: self.loginAnimation, fileName: "seccess", contentMode: .scaleAspectFit)
         view.play { (finished) in
             if finished {
@@ -53,17 +141,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    func updateDesign()  {
-        headerImage.layer.cornerRadius = self.bigView.bounds.height * 0.29
-        headerImage.layer.masksToBounds = true
-        headerImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
-        viewOpecity.layer.cornerRadius = self.bigView.bounds.height * 0.29
-        viewOpecity.layer.masksToBounds = true
-        viewOpecity.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
-        loginAnimation.isHidden = true
-
-        
-    }
+    //MARK: - IBAction
     
     @IBAction func showPasswordBtnPressed(_ sender: UIButton) {
         loginPasswordTf.isSecureTextEntry = !loginPasswordTf.isSecureTextEntry
@@ -86,7 +164,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-         startAnimation()
+        getLogin()
     }
     
 }

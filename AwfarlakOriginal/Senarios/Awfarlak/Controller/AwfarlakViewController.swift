@@ -20,10 +20,8 @@ class AwfarlakViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDesign()
-       
     }
     
- 
     
     func updateDesign()  {
         awfarlakBgImage.layer.cornerRadius = self.bigView.bounds.height * 0.3
@@ -58,6 +56,7 @@ extension UIViewController: UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+  
 }
 
 
@@ -90,6 +89,7 @@ extension String {
         return attributeString
     }
 }
+
 
 
 

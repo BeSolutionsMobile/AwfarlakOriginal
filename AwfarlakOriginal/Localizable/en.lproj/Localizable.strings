@@ -6,6 +6,36 @@
   Copyright © 2020 amirahmed. All rights reserved.
 */
 
+// MARK: - Alert
+
+"Error" = "Error";
+"Success" = "Success";
+"OK" = "OK";
+
+// MARK: - Register
+
+"RegisterMsg1" = "All Fields Are Required";
+"RegisterMsg2" = "Please Accept our terms and Conditions then try Again";
+"RegisterMsg3" = "The Minimum Number for a Name is 3 Letters";
+"RegisterMsg4" = "Email must be a Valid E-mail";
+"RegisterMsg5" = "Phone Number must be 11 Numbers";
+"RegisterMsg6" = "Password is at Least 6 Characters Long";
+"RegisterMsg7" = "The Two Passwords must Match";
+
+// MARK: - Login
+
+"LoginMsg1" = "Field Email or Phone Number is Required";
+"LoginMsg2" = "Password is Required";
+"LoginMsg3" = "Error in (Email or Phone Number) or Password";
+
+// MARK: - ForgetPassword
+
+"ForgetPasswordMsg1" = "Field Email is Required";
+"ForgetPasswordMsg2" = "Email must be a Valid E-mail";
+"ForgetPasswordMsg3" = "The New Password has been Sent to your Email";
+"ForgetPasswordMsg4" = "Email is not Registered with us";
+
+
 "wellcom2Cart" = "You can also buy any of the products to get an enjoyable and pleasing shopping opportunity .";
 
 "wellcom2total" = " As you browse our products, you can view the statistics about the product and its ratings, and you can add it to your favorites list for your reference at any time.You can also buy any of the products to get an enjoyable and pleasing shopping opportunity .";
