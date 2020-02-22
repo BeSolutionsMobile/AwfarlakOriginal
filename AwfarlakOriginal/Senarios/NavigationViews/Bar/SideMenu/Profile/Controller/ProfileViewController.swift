@@ -28,16 +28,28 @@ class ProfileViewController: UIViewController {
     }
     @IBOutlet weak var changePhoto: UIButton!
     @IBOutlet weak var profilePhoto: UIImageView!
-    @IBOutlet weak var fullNameTf: UITextField!
-    @IBOutlet weak var emailTf: UITextField!
-    @IBOutlet weak var phoneTf: UITextField!
-    @IBOutlet weak var passwordTf: UITextField!{
+    @IBOutlet weak var fullNameTf: UITextField!{
         didSet{
-            passwordTf.delegate = self
-            passwordTf.isSecureTextEntry = true
+            fullNameTf.isSecureTextEntry = false
+            fullNameTf.delegate = self
+
         }
     }
-    @IBOutlet weak var addressTf: UITextField!
+    @IBOutlet weak var emailTf: UITextField!{
+        didSet{
+            emailTf.isSecureTextEntry = false
+            emailTf.delegate = self
+
+        }
+    }
+    @IBOutlet weak var phoneTf: UITextField!{
+        didSet{
+            phoneTf.isSecureTextEntry = false
+            phoneTf.delegate = self
+
+        }
+    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +68,17 @@ class ProfileViewController: UIViewController {
     @IBAction func changPhotoBtnPressed(_ sender: UIButton) {
     }
     
-    @IBAction func showPassword(_ sender: UIButton) {
-        passwordTf.isSecureTextEntry = !passwordTf.isSecureTextEntry
-    }
+   
     @IBAction func editBtnPressed(_ sender: UIButton) {
     }
     
+    
+    @IBAction func changePassordBtnPressed(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(identifier: "ChangePasswordViewController") as? ChangePasswordViewController {
+                   vc.modalPresentationStyle = .fullScreen
+                   navigationController?.pushViewController(vc, animated: true)
+               }
+    }
 }
 
 

@@ -34,6 +34,8 @@ class LoginViewController: UIViewController {
     
     var login : Login?
     
+    //MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDesign()
@@ -55,8 +57,6 @@ class LoginViewController: UIViewController {
         viewOpecity.layer.masksToBounds = true
         viewOpecity.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
         loginAnimation.isHidden = true
-        
-        
     }
     
     //MARK: - Func to Login
@@ -65,12 +65,18 @@ class LoginViewController: UIViewController {
         if validateLoginTfEmpty() {
             Services.login(email: loginEmailTf.text!, password: loginPasswordTf.text!, callback: { (result) in
                 print(result)
-                self.login = result
-                self.clearText()
-                self.setData()
-                self.startAnimation()
+                switch result.status {
+                case 1:
+                    self.login = result
+                    self.clearText()
+                    self.setData()
+                    self.startAnimation()
+                case 2:
+                    self.incorrectEmailOrPassword()
+                default:
+                    print(result.status)
+                }
             }) { (error) in
-                self.incorrectEmailOrPassword()
                 print(error.localizedDescription)
             }
         }
@@ -108,11 +114,12 @@ class LoginViewController: UIViewController {
     //MARK: - Func to Set Date in UserDafault
     
     func setData() {
-        UserDefault.setId((self.login?.userData.id)!)
-        UserDefault.setName((self.login?.userData.name)!)
-        UserDefault.setEmail((self.login?.userData.mail)!)
-        UserDefault.setPhone((self.login?.userData.phone)!)
+        UserDefault.setId((self.login?.userData?.id)!)
+        UserDefault.setName((self.login?.userData?.name)!)
+        UserDefault.setEmail((self.login?.userData?.mail)!)
+        UserDefault.setPhone((self.login?.userData?.phone)!)
     }
+ 
     
     //MARK: - Func to Empty TextFaild
     

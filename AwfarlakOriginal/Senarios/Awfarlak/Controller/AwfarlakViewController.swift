@@ -10,18 +10,20 @@ import UIKit
 
 class AwfarlakViewController: UIViewController {
     
-
+    //MARK: - IBOutlet
+    
     @IBOutlet var bigView: UIView!
     @IBOutlet weak var awfarlakBgImage: UIImageView!
-
     
     
+    //MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDesign()
     }
     
+    //MARK: - Func to  Update Design
     
     func updateDesign()  {
         awfarlakBgImage.layer.cornerRadius = self.bigView.bounds.height * 0.3
@@ -29,6 +31,10 @@ class AwfarlakViewController: UIViewController {
         awfarlakBgImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner  ]
         
     }
+    
+    
+    
+    //MARK: - IBAction
     
     @IBAction func logInBtnPressed(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
@@ -50,16 +56,21 @@ class AwfarlakViewController: UIViewController {
 
 
 
+   //MARK: - Extension
+
+
+  //MARK:-UITextFieldDelegate
 
 extension UIViewController: UITextFieldDelegate{
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-  
+    
 }
 
 
+ //MARK:- NSAttributedString
 
 extension NSAttributedString {
     static func withDualText(text1: String ,ofSizeText1: CGFloat ,text2: String ,ofSizeText2: CGFloat ) -> NSMutableAttributedString{
@@ -78,10 +89,12 @@ extension NSAttributedString {
 }
 
 
+  //MARK:- String
+
 extension String {
     var localized: String {
-           return NSLocalizedString(self, comment: "")
-       }
+        return NSLocalizedString(self, comment: "")
+    }
     func strikeThrough() -> NSAttributedString {
         let attributeString =  NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))

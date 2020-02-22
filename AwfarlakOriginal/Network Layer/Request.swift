@@ -23,11 +23,11 @@ class Service {
         
         print(url)
         print(parameters)
-        NSURLRequest.CachePolicy.reloadIgnoringCacheData
+        URLCache.shared.removeAllCachedResponses()
 
         //        print(headers)
         AF.request(url, method: method, parameters: parameters, headers: headers).validate().responseJSON { (response) in
-            
+
             //    print(response.result.value)
             switch response.result {
             case .success:
@@ -47,5 +47,12 @@ class Service {
         }
         
     }
+    
+    
+    
+    
+    
+    
+    
     
 }

@@ -15,7 +15,7 @@
 "9mw-KU-F8v.text" = "١٠";
 
 /* Class = "UILabel"; text = "Mango Details"; ObjectID = "AS8-kQ-wbC"; */
-"AS8-kQ-wbC.text" = "تفاصيل المانجو";
+"AS8-kQ-wbC.text" = "تفاصيل المنتج";
 
 /* Class = "UILabel"; text = "Off"; ObjectID = "EOz-E9-GEu"; */
 "EOz-E9-GEu.text" = "خصم";
@@ -42,7 +42,7 @@
 "c2H-Jh-kf9.text" = "Rs.٣.٧٥/كجم";
 
 /* Class = "UILabel"; text = "Thaengeonesusarbejluoincgysstontheefrcuaitsh(derwupfeasm) iplyroAdnuacceadrdfriaocmeae.\nnumerous species of tropical trees belonging to the flowering Mangoes are native to South Asia,[1][2] from where the\n plant genus Mangifera, cultivated mostly for its edible fruit. \"common mango\" or \"Indian mango\", Mangifera indica, has\nMost of these species are found"; ObjectID = "cJT-xp-5G4"; */
-"cJT-xp-5G4.text" = "المانجو هي حجر الفاكهة العصير (النويات) المنتجة منأنواع عديدة من الأشجار الاستوائية التي تنتمي إلى المانجو المزهرة هي موطنها الأصلي في جنوب آسيا ، [1] [2] من حيث جنس نبات ، المزروعة في الغالب لثمرة صالحة للأكل. المانجو المشترك أو المانجو الهندي ، مانجيفيرا إنديكا ، لديهتم العثور على معظم هذه الأنواع";
+"cJT-xp-5G4.text" = "";
 
 /* Class = "UILabel"; text = "Select Quantity"; ObjectID = "dbK-op-HeI"; */
 "dbK-op-HeI.text" = "اختار الكيمة";
@@ -84,7 +84,7 @@
 "uhW-li-UGp.text" = "Rs.٣.٧٥/كجم";
 
 /* Class = "UILabel"; text = "Mango Details"; ObjectID = "vii-Vp-U7q"; */
-"vii-Vp-U7q.text" = "تفاصيل المانجو";
+"vii-Vp-U7q.text" = "تفاصيل المنتج";
 
 /* Class = "UITextField"; placeholder = "Write a Comment...."; ObjectID = "zDz-Xq-wyP"; */
 "zDz-Xq-wyP.placeholder" = "اكتب تعليق...";

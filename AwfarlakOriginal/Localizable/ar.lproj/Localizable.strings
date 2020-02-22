@@ -28,12 +28,25 @@
 "LoginMsg2" = "كلمة المرور مطلوبة";
 "LoginMsg3" = "خطأ في (البريد الالكتروني او رقم الهاتف) او كلمة المرور";
 
-// MARK: - ForgetPassword
+// MARK: - Forget Password
 
 "ForgetPasswordMsg1" = "الحقل البريد الالكتروني مطلوب";
 "ForgetPasswordMsg2" = "البريد الالكتروني لابد ان يكون ايميل صحيح";
 "ForgetPasswordMsg3" = "تم ارسال كلمة المرور الجديدة الي البريد الالكتروني الخاص بك";
 "ForgetPasswordMsg4" = "البريد الإلكتروني غير مسجل معنا";
+"ForgetPasswordAlertMsg" = "تسجيل الدخول";
+
+// MARK: - Product Details
+
+"Rs" = "سع.";
+
+// MARK: - Add Rate
+
+"Rat" = "لقد تم اضافة تقييمك بنجاح";
+
+// MARK: - Comments
+
+"Comments" = "لا توجد تعليقات على هذا المنتج";
 
 "wellcom2Cart" = "يمكنك أيضًا شراء أي من المنتجات للحصول على فرصة تسوق ممتعة  .";
 

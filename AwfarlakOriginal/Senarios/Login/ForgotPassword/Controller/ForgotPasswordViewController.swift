@@ -21,6 +21,8 @@ class ForgotPasswordViewController: UIViewController {
     }
     @IBOutlet weak var backToLogin: UIButton!
     
+    //MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDesign()
@@ -46,7 +48,7 @@ class ForgotPasswordViewController: UIViewController {
                 switch result.status {
                 case 1:
                     self.clearText()
-                    Alert.show("Success".localized, massege: "ForgetPasswordMsg3".localized, context: self)
+                    self.CusstomAlert()
                 case 2:
                     CustomDesign.validateNotDone(textField: self.emailTf, numberOfShakes: 3, revert: true)
                     Alert.show("Error".localized, massege: "ForgetPasswordMsg4".localized, context: self)
@@ -59,9 +61,24 @@ class ForgotPasswordViewController: UIViewController {
         }
     }
     
+    //MARK: - Func to Create Cussstom Alert
     
+    func CusstomAlert()  {
+        let alertController = UIAlertController(title:"Success".localized, message:"ForgetPasswordMsg3".localized , preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title:"ForgetPasswordAlertMsg".localized, style:.default, handler:self.loginHandler))
+        alertController.addAction(UIAlertAction(title:"Ok".localized, style:.cancel, handler:nil))
+          self.present(alertController, animated:true, completion:nil)
+          
+        }
     
-   
+   //MARK: - Func to Handler Action in Cussstom Alert
+
+    func loginHandler(alert:UIAlertAction!){
+        if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+    }
     
     
     

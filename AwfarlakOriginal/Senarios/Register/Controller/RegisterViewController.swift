@@ -56,7 +56,8 @@ class RegisterViewController: UIViewController {
     
     var login : Login?
 
-    
+    //MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDesign()
@@ -75,34 +76,36 @@ class RegisterViewController: UIViewController {
         if validateRegister(){
             Services.register(name: fullNameTf.text! , mail: emailTf.text!, phone: phoneTf.text!, password: passwordTf.text!, callback: { (result) in
                 print(result)
-                self.getLogin()
+                switch result.status {
+                case 1:
+                    self.getLogin()
+                case 2:
+                    Alert.show("Error".localized, massege: result.message, context: self)
+                default:
+                    print(result.status)
+                }
             }) { (error) in
-                self.getRegisterFailure()
+                print(error.localizedDescription)
             }
         }
     }
     
-    //MARK: - Func to In Case The Registration Failed
-    
-    func getRegisterFailure()  {
-        Services.registerFailure(name: fullNameTf.text! , mail: emailTf.text!, phone: phoneTf.text!, password: passwordTf.text!, callback: { (result) in
-            print(result)
-            Alert.show("Error".localized, massege: result.message, context: self)
-        }) { (error) in
-            print(error.localizedDescription)
-            
-        }
-    }
     
     //MARK: - Func to Login After  Register
     
-    func getLogin()  {
+    func getLogin(){
         Services.login(email: emailTf.text!, password: passwordTf.text!, callback: { (result) in
             self.login = result
             print(result)
-            self.clearText()
-            self.setData()
-            self.startAnimation()
+            switch result.status {
+            case 1:
+                self.login = result
+                self.clearText()
+                self.setData()
+                self.startAnimation()
+            default:
+                print(result.status)
+            }
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -166,10 +169,10 @@ class RegisterViewController: UIViewController {
     //MARK: - Func to Set Date in UserDafault
     
     func setData() {
-        UserDefault.setId((self.login?.userData.id)!)
-        UserDefault.setName((self.login?.userData.name)!)
-        UserDefault.setEmail((self.login?.userData.mail)!)
-        UserDefault.setPhone((self.login?.userData.phone)!)
+        UserDefault.setId((self.login?.userData?.id)!)
+        UserDefault.setName((self.login?.userData?.name)!)
+        UserDefault.setEmail((self.login?.userData?.mail)!)
+        UserDefault.setPhone((self.login?.userData?.phone)!)
     }
     
     //MARK: - Func to Empty TextFaild
@@ -209,7 +212,6 @@ class RegisterViewController: UIViewController {
     
     
     //MARK: - IBAction
-    
     
     @IBAction func showPassowrdBtnPressed(_ sender: UIButton) {
         passwordTf.isSecureTextEntry = !passwordTf.isSecureTextEntry

@@ -14,10 +14,12 @@ target 'AwfarlakOriginal' do
   pod 'SideMenu'
   pod 'lottie-ios'
   pod 'MOLH'
-  pod 'SDWebImage', '~> 5.0'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'SDWebImage'
+
 
   pod 'Alamofire'
+
 
 
 end

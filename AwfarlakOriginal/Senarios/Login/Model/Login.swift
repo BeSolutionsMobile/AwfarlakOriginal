@@ -12,7 +12,7 @@ import Foundation
 struct Login: Codable {
     let status: Int
     let message: String
-    let userData: UserData
+    let userData: UserData?
     
     enum CodingKeys: String, CodingKey {
         case status, message

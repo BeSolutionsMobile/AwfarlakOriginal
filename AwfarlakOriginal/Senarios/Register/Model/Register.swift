@@ -10,8 +10,8 @@ import Foundation
 // MARK: - Register
 struct Register: Codable {
     let status: Int
-    let idUser, message: String
-
+    let message: String
+    let idUser: String?
     enum CodingKeys: String, CodingKey {
         case status
         case idUser = "id_user"

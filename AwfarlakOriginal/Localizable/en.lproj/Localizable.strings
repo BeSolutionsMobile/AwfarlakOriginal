@@ -28,12 +28,25 @@
 "LoginMsg2" = "Password is Required";
 "LoginMsg3" = "Error in (Email or Phone Number) or Password";
 
-// MARK: - ForgetPassword
+// MARK: - Forget Password
 
 "ForgetPasswordMsg1" = "Field Email is Required";
 "ForgetPasswordMsg2" = "Email must be a Valid E-mail";
 "ForgetPasswordMsg3" = "The New Password has been Sent to your Email";
 "ForgetPasswordMsg4" = "Email is not Registered with us";
+"ForgetPasswordAlertMsg" = "GoLogin";
+
+// MARK: - Product Details
+
+"Rs" = "Rs.";
+
+// MARK: - Add Rate
+
+"Rat" = "Your Rating has been Added Successfully";
+
+// MARK: - Comments
+
+"Comments" = "There are no Comments on this Product";
 
 
 "wellcom2Cart" = "You can also buy any of the products to get an enjoyable and pleasing shopping opportunity .";
