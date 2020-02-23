@@ -7,14 +7,25 @@
 //
 
 import UIKit
+
+//MARK: - Insert New Protocal QuestionDelegate
+
 protocol QuestionDelegate {
-    func faqView( question: DesignableUITextField, answeer: UILabel )
+    func faqView( question: DesignableUITextField, answeer: UILabel  , text:String)
 }
+
 class FAQTableViewCell: UITableViewCell {
+    
+    //MARK: - IBOutlet
+
     @IBOutlet weak var questionTf: DesignableUITextField!
     @IBOutlet weak var ansswerLbl: UILabel!
     
+    //MARK: - Variables
+
     var delegate: QuestionDelegate?
+    var answer: String?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,8 +37,13 @@ class FAQTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - IBAction
+
     @IBAction func questionClick(_ sender: UIButton) {
-        delegate?.faqView(question: questionTf, answeer: ansswerLbl)
+        if let answer = answer {
+            delegate?.faqView(question: questionTf, answeer: ansswerLbl, text: answer)
+
+        }
 }
 }
 

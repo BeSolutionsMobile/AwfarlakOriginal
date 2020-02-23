@@ -229,6 +229,10 @@ class ProductDetailsViewController: UIViewController {
     
     
     @IBAction func callBtnPressed(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(identifier: "ContactUsViewController") as? ContactUsViewController {
+            vc.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func addCartBtnPressed(_ sender: UIButton) {

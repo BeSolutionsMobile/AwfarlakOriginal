@@ -9,6 +9,8 @@
 import UIKit
 
 class TitleOfSectionTableViewCell: UITableViewCell {
+    
+    //MARK: - IBOutlet
 
     @IBOutlet weak var groupName: UILabel!
     override func awakeFromNib() {

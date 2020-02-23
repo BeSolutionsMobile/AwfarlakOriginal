@@ -438,6 +438,14 @@
             </objects>
             <point key="canvasLocation" x="1942" y="48"/>
         </scene>
+        <!--ContactUsViewController-->
+        <scene sceneID="RAq-qT-b1m">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ContactUsViewController" storyboardName="AboutAwfalakStoryboard" referencedIdentifier="ContactUsViewController" id="64m-xV-GOz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qj7-X0-5bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2618" y="-379"/>
+        </scene>
         <!--Mango-->
         <scene sceneID="sH2-X9-Ph0">
             <objects>
@@ -598,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48I-se-tqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2974" y="96"/>
+            <point key="canvasLocation" x="2684" y="52"/>
         </scene>
         <!--Add Rate View Controller-->
         <scene sceneID="RXt-mc-RMO">
@@ -765,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wu9-Rj-SYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3731.884057971015" y="96.428571428571431"/>
+            <point key="canvasLocation" x="3396" y="52"/>
         </scene>
         <!--Comments Segmented View Controller-->
         <scene sceneID="5lB-7X-ZqX">
@@ -896,7 +904,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mit-jp-BN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4470" y="96"/>
+            <point key="canvasLocation" x="4186" y="52"/>
         </scene>
         <!--Add Cart Popup View Controller-->
         <scene sceneID="8MC-qV-jDi">
@@ -1126,7 +1134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr0-Pr-1Qq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5179.7101449275369" y="95.758928571428569"/>
+            <point key="canvasLocation" x="4884" y="52"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="SKJ-xe-icx">

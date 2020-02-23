@@ -31,6 +31,12 @@ class URLs {
     static let addRate = baseURL + "user/addRate/549834453/25598"
     static let getComments = baseURL + "comments/view_offer_comments/549834453/25598"
     static let addComments = baseURL + "comments/add_comment/549834453/25598"
+    static let editProfile = baseURL + "user/editProfile/549834453/25598"
+    static let viewProfile = baseURL + "User/view/549834453/25598"
+    static let changePassword = baseURL + "User/update_password/549834453/25598"
+    static let faq = baseURL + "Question/View/549834453/25598"
+
+
 
 
 

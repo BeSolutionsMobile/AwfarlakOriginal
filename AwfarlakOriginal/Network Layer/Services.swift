@@ -161,6 +161,52 @@ class Services {
            }
        }
     
+    // MARK: - Edit Profile
+
+    class func editProfile(name: String, email: String,phone: String,idUser: String, callback: @escaping (EditProfile) -> Void, failureHandler: @escaping (Error) -> Void) {
+        let url = URLs.editProfile
+        let parameters = ["name": name, "mail": email ,"phone": phone, "id_user": idUser ]
+        Service.request(url: url, dateFormate: nil, method: HTTPMethod.post, parameters: parameters, headers:nil, callBack: { (response: EditProfile) in
+            callback(response)
+        }) { (error) in
+            failureHandler(error)
+        }
+    }
+    
+    // MARK: - Get Data Of User
+
+    class func getDataOfUser(idUser: String ,callback: @escaping (ViewProfile) -> Void, failureHandler: @escaping (Error) -> Void) {
+        let url = "\(URLs.viewProfile)/\(idUser)"
+        Service.request(url: url, dateFormate: nil, method: HTTPMethod.get, parameters: nil, headers:nil, callBack: { (response: ViewProfile) in
+            callback(response)
+        }) { (error) in
+            failureHandler(error)
+        }
+    }
+    
+    // MARK: - Change Password
+
+    class func changePassword(oldPassword: String, newPassword: String,reNewPassword: String,idUser: String, callback: @escaping (ChangePassword) -> Void, failureHandler: @escaping (Error) -> Void) {
+        let url = URLs.changePassword
+        let parameters = ["old_password": oldPassword, "new_password": newPassword ,"re_new_password": reNewPassword, "id_user": idUser ]
+        Service.request(url: url, dateFormate: nil, method: HTTPMethod.post, parameters: parameters, headers:nil, callBack: { (response: ChangePassword) in
+            callback(response)
+        }) { (error) in
+            failureHandler(error)
+        }
+    }
+    
+    // MARK: - View Question
+
+       class func getQuestion(callback: @escaping (FaQuestion) -> Void, failureHandler: @escaping (Error) -> Void) {
+           let url = URLs.faq
+           Service.request(url: url, dateFormate: nil, method: HTTPMethod.post, parameters: nil, headers:nil, callBack: { (response: FaQuestion) in
+               callback(response)
+           }) { (error) in
+               failureHandler(error)
+           }
+       }
+    
     
     
 }

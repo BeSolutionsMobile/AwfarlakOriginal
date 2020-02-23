@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Func to Login
     
-    func getLogin()  {
+    func getLogin(){
         if validateLoginTfEmpty() {
             Services.login(email: loginEmailTf.text!, password: loginPasswordTf.text!, callback: { (result) in
                 print(result)

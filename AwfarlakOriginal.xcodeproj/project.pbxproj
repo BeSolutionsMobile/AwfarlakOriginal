@@ -19,9 +19,13 @@
 		3B0DEA9523E9C71A00250EE2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DEA9423E9C71A00250EE2 /* SearchViewController.swift */; };
 		3B0DFF5B24019EB200F78976 /* AddComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFF5A24019EB200F78976 /* AddComments.swift */; };
 		3B0DFF5F2401B15800F78976 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFF5E2401B15800F78976 /* ChangePasswordViewController.swift */; };
+		3B0DFF622401BE0900F78976 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFF612401BE0900F78976 /* EditProfile.swift */; };
+		3B0DFF642401C62D00F78976 /* ViewProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DFF632401C62D00F78976 /* ViewProfile.swift */; };
 		3B11F0E123E2E039003FB6B0 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0E023E2E039003FB6B0 /* CategoriesViewController.swift */; };
 		3B11F0E823E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0E723E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift */; };
 		3B11F0EC23E2FDDE003FB6B0 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */; };
+		3B12974524027EEA0041BD7C /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12974424027EEA0041BD7C /* ChangePassword.swift */; };
+		3B129748240288710041BD7C /* FaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129747240288710041BD7C /* FaQuestion.swift */; };
 		3B12A5E7240019B60075C1D3 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A5E6240019B60075C1D3 /* ProductDetails.swift */; };
 		3B12FEF523E04A4E00C7A75D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */; };
 		3B13C3C723FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13C3C623FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift */; };
@@ -134,9 +138,13 @@
 		3B0DEA9423E9C71A00250EE2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3B0DFF5A24019EB200F78976 /* AddComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComments.swift; sourceTree = "<group>"; };
 		3B0DFF5E2401B15800F78976 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		3B0DFF612401BE0900F78976 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		3B0DFF632401C62D00F78976 /* ViewProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfile.swift; sourceTree = "<group>"; };
 		3B11F0E023E2E039003FB6B0 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		3B11F0E723E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
+		3B12974424027EEA0041BD7C /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		3B129747240288710041BD7C /* FaQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaQuestion.swift; sourceTree = "<group>"; };
 		3B12A5E6240019B60075C1D3 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3B13C3C623FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAndDeleteFavoriteProduct.swift; sourceTree = "<group>"; };
@@ -352,6 +360,7 @@
 		3B0DFF5C2401B12C00F78976 /* Change Password */ = {
 			isa = PBXGroup;
 			children = (
+				3B12974324027EDC0041BD7C /* Model */,
 				3B0DFF5D2401B13700F78976 /* Controller */,
 			);
 			path = "Change Password";
@@ -363,6 +372,15 @@
 				3B0DFF5E2401B15800F78976 /* ChangePasswordViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B0DFF602401BDF000F78976 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B0DFF612401BE0900F78976 /* EditProfile.swift */,
+				3B0DFF632401C62D00F78976 /* ViewProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B11F0E223E2EB08003FB6B0 /* Bar */ = {
@@ -406,6 +424,22 @@
 			isa = PBXGroup;
 			children = (
 				3B140E7723FBF76000A89CB0 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B12974324027EDC0041BD7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B12974424027EEA0041BD7C /* ChangePassword.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B129746240287DB0041BD7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B129747240288710041BD7C /* FaQuestion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +502,7 @@
 		3B13E69B23E5F6DD00D797AA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3B0DFF602401BDF000F78976 /* Model */,
 				3B13E69F23E5F78E00D797AA /* Controller */,
 				3B0DFF5C2401B12C00F78976 /* Change Password */,
 			);
@@ -610,6 +645,7 @@
 		3B148B8A23EAEFA700839538 /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
+				3B129746240287DB0041BD7C /* Model */,
 				3BC8FDF623EB1ADD0083C284 /* View */,
 				3B148B8D23EAEFFF00839538 /* Controller */,
 			);
@@ -1303,17 +1339,20 @@
 				3B21693523DF06C2008D4920 /* DesignableUITextField.swift in Sources */,
 				3B1EA58A24018A6400033F69 /* ProductComments.swift in Sources */,
 				3BC8FDFB23EB1ADE0083C284 /* FAQTableViewCell.swift in Sources */,
+				3B0DFF622401BE0900F78976 /* EditProfile.swift in Sources */,
 				3B13E6AB23E5FD2C00D797AA /* MyComparisonViewController.swift in Sources */,
 				3B13E69523E5AFDA00D797AA /* AwfarlakSideMenuViewController.swift in Sources */,
 				3B21697B23DF2689008D4920 /* SSBadgeButton.swift in Sources */,
 				3B1C310723E4918500C14138 /* ProductsViewController.swift in Sources */,
 				3B36703123F82FE900FC3DF3 /* Failure.swift in Sources */,
 				3B21693423DF06C2008D4920 /* CustemDesign.swift in Sources */,
+				3B129748240288710041BD7C /* FaQuestion.swift in Sources */,
 				3B140E7623FBED8300A89CB0 /* SubCategories.swift in Sources */,
 				3B13C3CA23FEE4D400379CB0 /* FavoriteProducts.swift in Sources */,
 				3B0DFF5F2401B15800F78976 /* ChangePasswordViewController.swift in Sources */,
 				3B6FD38E23F99B5F003F0056 /* Login.swift in Sources */,
 				3B2ED3EF23EC64FB00AE2801 /* ThirdViewController.swift in Sources */,
+				3B12974524027EEA0041BD7C /* ChangePassword.swift in Sources */,
 				3B1C311123E4EEB400C14138 /* AddCartPopupViewController.swift in Sources */,
 				3B21693123DF06C2008D4920 /* Alert.swift in Sources */,
 				3B0DFF5B24019EB200F78976 /* AddComments.swift in Sources */,
@@ -1321,6 +1360,7 @@
 				3BA9634823FD9646001FDC9C /* Products.swift in Sources */,
 				3B0DEA9523E9C71A00250EE2 /* SearchViewController.swift in Sources */,
 				3B148B8423EAC8FD00839538 /* OrderSuccessfulViewController.swift in Sources */,
+				3B0DFF642401C62D00F78976 /* ViewProfile.swift in Sources */,
 				3B21697A23DF2689008D4920 /* MainNavigationController.swift in Sources */,
 				3B148B8023EABF7400839538 /* MyFavouriteCollectionViewCell.swift in Sources */,
 				3B12FEF523E04A4E00C7A75D /* RegisterViewController.swift in Sources */,

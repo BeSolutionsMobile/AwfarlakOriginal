@@ -10,6 +10,8 @@ import UIKit
 
 class ChangePasswordViewController: UIViewController {
     
+    //MARK: - IBOutlet
+    
     @IBOutlet weak var oldPasswordTf: UITextField!{
         didSet{
             oldPasswordTf.delegate = self
@@ -25,15 +27,84 @@ class ChangePasswordViewController: UIViewController {
             reNewPasswordTf.delegate = self
         }
     }
+    
+    //MARK: - Variables
+    
+    var changePassword : ChangePassword?
+    
+    //MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
-
+        
         // Do any additional setup after loading the view.
     }
     
+    //MARK: - Func to Change Password
     
-   
+    func getChangePassword()  {
+        if validatePassword() {
+            Services.changePassword(oldPassword: oldPasswordTf.text!, newPassword: newPasswordTf.text!, reNewPassword: reNewPasswordTf.text!, idUser: UserDefault.getId(), callback: { (result) in
+                print(result)
+                switch result.status {
+                case 1:
+                    self.changePassword = result
+                    Alert.show("Success".localized, massege: "ChangePass5".localized, context: self)
+                    self.clearText()
+                case 2:
+                    Alert.show("Error".localized, massege: result.message, context: self)
+                default:
+                    print(result.status)
+                }
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
+    
+    //MARK: - Func to Validation Password
+    
+    func validatePassword()->Bool {
+        if let  oldPass = oldPasswordTf.text ,!oldPass.isEmpty, let newPass = newPasswordTf.text ,!newPass.isEmpty, let reNewPass = reNewPasswordTf.text ,!reNewPass.isEmpty{
+            if oldPass.count >= 6{
+                if newPass.count >= 6 {
+                    if reNewPass.count >= 6 {
+                        if newPass == reNewPass {
+                            return true
+                        }else {
+                            Alert.show("Error".localized, massege: "ChangePass4".localized, context: self)
+                            return false
+                        }
+                    }else{
+                        Alert.show("Error".localized, massege: "ChangePass3".localized, context: self)
+                        return false
+                    }
+                }else {
+                    Alert.show("Error".localized, massege: "ChangePass2".localized, context: self)
+                    return false
+                }
+            }else {
+                Alert.show("Error".localized, massege: "ChangePass1".localized, context: self)
+                return false
+            }
+        }else{
+            Alert.show("Error".localized, massege: "ChangePass6".localized, context: self)
+            return false
+        }
+    }
+    
+    //MARK: - Func to Empty TextFaild
+    
+    func clearText()  {
+        oldPasswordTf.text = ""
+        newPasswordTf.text = ""
+        reNewPasswordTf.text = ""
+    }
+    
+    //MARK: - IBAction
+    
     @IBAction func showPassword(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -48,6 +119,7 @@ class ChangePasswordViewController: UIViewController {
         
     }
     @IBAction func changePasswordBtn(_ sender: UIButton) {
+        getChangePassword()
     }
     
 }

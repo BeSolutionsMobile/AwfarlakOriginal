@@ -16,7 +16,7 @@
 
 "RegisterMsg1" = "All Fields Are Required";
 "RegisterMsg2" = "Please Accept our terms and Conditions then try Again";
-"RegisterMsg3" = "The Minimum Number for a Name is 3 Letters";
+"RegisterMsg3" = "The Minimum Number for a Name is 4 Letters";
 "RegisterMsg4" = "Email must be a Valid E-mail";
 "RegisterMsg5" = "Phone Number must be 11 Numbers";
 "RegisterMsg6" = "Password is at Least 6 Characters Long";
@@ -47,6 +47,26 @@
 // MARK: - Comments
 
 "Comments" = "There are no Comments on this Product";
+
+// MARK: - Profile
+
+"Profile1" = "The Minimum Number for a Name is 4 Letters";
+"Profile2" = "Email must be a Valid E-mail";
+"Profile3" = "Phone Number must be 11 Numbers";
+"Profile4" = "He Data Was Successfully Updated";
+
+
+// MARK: - Change Password
+
+"ChangePass1" = "Old Password is at Least 6 Characters Long";
+"ChangePass2" = "New Password is at Least 6 Characters Long";
+"ChangePass3" = "Re - New - Password is at Least 6 Characters Long";
+"ChangePass4" = "The Two Passwords must Match";
+"ChangePass5" = "Password successfully changed";
+"ChangePass6" = "All Fields Are Required";
+
+
+
 
 
 "wellcom2Cart" = "You can also buy any of the products to get an enjoyable and pleasing shopping opportunity .";

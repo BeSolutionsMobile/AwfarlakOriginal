@@ -116,7 +116,7 @@ class RegisterViewController: UIViewController {
     func validateRegister()->Bool {
         if let  name = fullNameTf.text ,!name.isEmpty, let email = emailTf.text ,!email.isEmpty, let phone = phoneTf.text ,!phone.isEmpty, let pass = passwordTf.text,!pass.isEmpty,let confrimPass  = confirmPasswordTf.text , !confrimPass.isEmpty{
             if iAgreeChk.on == true {
-                if name.count >= 3{
+                if name.count >= 4{
                     if emailIsValid(email) == true {
                         if phone.count >= 11 {
                             if pass.count >= 6 {
