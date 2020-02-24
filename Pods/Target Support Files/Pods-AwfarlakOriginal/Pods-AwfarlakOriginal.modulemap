@@ -1,0 +1,6 @@
+framework module Pods_AwfarlakOriginal {
+  umbrella header "Pods-AwfarlakOriginal-umbrella.h"
+
+  export *
+  module * { export * }
+}
