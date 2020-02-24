@@ -35,6 +35,8 @@ class URLs {
     static let viewProfile = baseURL + "User/view/549834453/25598"
     static let changePassword = baseURL + "User/update_password/549834453/25598"
     static let faq = baseURL + "Question/View/549834453/25598"
+    static let sendOrder = baseURL + "cart/sendOrder/549834453/25598"
+    static let search = baseURL + "Product/searchByName/549834453/25598"
 
 
 

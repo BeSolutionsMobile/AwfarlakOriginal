@@ -9,11 +9,11 @@
 import UIKit
 
 class AboutUsViewController: UIViewController {
-
+    
     @IBOutlet weak var aboutView: UIView!{
         didSet{
-           aboutView.layer.cornerRadius = 25
-           aboutView.clipsToBounds = true
+            aboutView.layer.cornerRadius = 25
+            aboutView.clipsToBounds = true
         }
     }
     @IBOutlet var bigView: UIView!
@@ -23,11 +23,15 @@ class AboutUsViewController: UIViewController {
         super.viewDidLoad()
         showAndBacNavigation()
         updateViewDesign()
-
+        
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        showAndBacNavigation()
+    }
     
-
+    
     func updateViewDesign() {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.shadowImage = UIImage()

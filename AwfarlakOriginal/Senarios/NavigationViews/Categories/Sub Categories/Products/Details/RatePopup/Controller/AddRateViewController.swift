@@ -8,8 +8,9 @@
 
 import UIKit
 import Cosmos
+import NVActivityIndicatorView
 
-class AddRateViewController: UIViewController {
+class AddRateViewController: UIViewController  , NVActivityIndicatorViewable{
     
     //MARK: - Variables
     
@@ -47,19 +48,24 @@ class AddRateViewController: UIViewController {
     //MARK: - Func to Add Rate To Product
        
        func addRateUserToProduct()  {
+        self.startAnimating()
         if let idProduct = idProduct , Int(addRate.rating) != nil {
             Services.addRate(idUser: UserDefault.getId(), idProduct: idProduct, rateNumber: Int(addRate.rating), callback: { (result) in
                    print(result)
                    switch result.status {
                    case 1:
                     Alert.show("Success".localized, massege: "Rat".localized, context: self)
+                    self.stopAnimating()
                    case 2:
                     Alert.show("Error".localized, massege: result.message!, context: self)
+                    self.stopAnimating()
                    default:
                     print(result.status ?? "")
+                    self.stopAnimating()
                    }
                }) { (error) in
                    print(error.localizedDescription)
+                   self.stopAnimating()
                }
            }
        }

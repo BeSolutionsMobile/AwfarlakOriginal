@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController  , NVActivityIndicatorViewable{
     
     //MARK: - IBOutlet
     
@@ -41,10 +42,17 @@ class ChangePasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
+    override func viewDidAppear(_ animated: Bool) {
+          super.viewDidAppear(true)
+          showAndBacNavigation()
+      }
+    
     //MARK: - Func to Change Password
     
     func getChangePassword()  {
         if validatePassword() {
+            self.startAnimating()
             Services.changePassword(oldPassword: oldPasswordTf.text!, newPassword: newPasswordTf.text!, reNewPassword: reNewPasswordTf.text!, idUser: UserDefault.getId(), callback: { (result) in
                 print(result)
                 switch result.status {
@@ -52,13 +60,17 @@ class ChangePasswordViewController: UIViewController {
                     self.changePassword = result
                     Alert.show("Success".localized, massege: "ChangePass5".localized, context: self)
                     self.clearText()
+                    self.stopAnimating()
                 case 2:
                     Alert.show("Error".localized, massege: result.message, context: self)
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
         

@@ -64,6 +64,21 @@
 "ChangePass5" = "الرقم السري تغير بنجاح";
 "ChangePass6" = "جميع الحقول مطلوبة";
 
+// MARK: -  My Comparison
+
+"MyComparison1" = "لا يمكن إضافة أكثر من منتجين";
+"MyComparison2" = "تم أضافه المنتج الي مقارنتي ";
+"MyComparison3" = "لا توجود اي مقارنات";
+"MyComparison4" = "تم أنهاء المقارنة بنجاح";
+
+// MARK: -  My Cart
+
+"MyCart1" = "تم أضافه المنتج الي السله بنجاح";
+"MyCart2" = "لا يوجود اي منتاجات";
+"MyCart3" = "There Are No Comparisons";
+"MyCart4" = "The Comparison Was Completed Successfully";
+
+
 
 
 

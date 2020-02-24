@@ -7,15 +7,15 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class FAQViewController: UIViewController {
+class FAQViewController: UIViewController  , NVActivityIndicatorViewable{
     
     //MARK: - Variables
     
     var faQuestion : FaQuestion?
     
     //MARK: - IBOutlet
-    let titlesF = ["￼What 3rd-party-applications","What","What","What"]
     @IBOutlet weak var faqTableView: UITableView!
     
     //MARK: - View Life Cycle
@@ -30,22 +30,32 @@ class FAQViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        showAndBacNavigation()
+    }
+    
     //MARK: - Func to Get All Question
     
     func getAllQuestion()  {
+        self.startAnimating()
         Services.getQuestion(callback: { (result) in
             print(result)
             switch result.status {
             case 1:
                 self.faQuestion = result
                 self.faqTableView.reloadData()
+                self.stopAnimating()
             case 2:
                 Alert.show("Error".localized, massege: result.message!, context: self)
+                self.stopAnimating()
             default:
                 print(result.status)
+                self.stopAnimating()
             }
         }) { (error) in
             print(error.localizedDescription)
+            self.stopAnimating()
         }
     }
     

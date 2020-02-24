@@ -28,6 +28,8 @@ class MyFavouriteCollectionViewCell: UICollectionViewCell {
     
     var delegate: ReloadCollectionViewFavourite?
     var idProduct : String?
+    var transferToCartDelegate : TransferToCartDelegate?
+    var index : IndexPath?
     
     
     //MARK: - Func to Delete Product From Favorite
@@ -60,5 +62,7 @@ class MyFavouriteCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func productFavCartBtnPreesed(_ sender: UIButton) {
+        transferToCartDelegate?.transferCart(index: index!.item)
+
     }
 }

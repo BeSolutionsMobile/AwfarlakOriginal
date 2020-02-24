@@ -37,7 +37,7 @@ class AwfarlakViewController: UIViewController {
     //MARK: - IBAction
     
     @IBAction func logInBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
@@ -47,7 +47,7 @@ class AwfarlakViewController: UIViewController {
     
     
     @IBAction func createAccountBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "RegisterViewController") as? RegisterViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

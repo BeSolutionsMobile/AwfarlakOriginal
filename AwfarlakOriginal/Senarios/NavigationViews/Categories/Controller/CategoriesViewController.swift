@@ -8,7 +8,8 @@
 
 import UIKit
 import SDWebImage
-class CategoriesViewController: UIViewController {
+import NVActivityIndicatorView
+class CategoriesViewController: UIViewController , NVActivityIndicatorViewable {
     
     
     //MARK: - Variables
@@ -20,7 +21,7 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
     //MARK: - View Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showNavigation()
@@ -29,23 +30,33 @@ class CategoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+         showNavigation()
+    }
+    
     
     //MARK: - Func to Get All Categories
     
     func getAllCategories()  {
+        self.startAnimating()
         Services.getAllCategories(callback: { (result) in
             print(result)
             switch result.status {
             case 1:
                 self.categories = result
                 self.categoriesCollectionView.reloadData()
+                self.stopAnimating()
             case 2:
                 Alert.show("Error".localized, massege: result.message!, context: self)
+                self.stopAnimating()
             default:
                 print(result.status)
+                self.stopAnimating()
             }
         }) { (error) in
             print(error.localizedDescription)
+            self.stopAnimating()
         }
     }
     
@@ -80,14 +91,14 @@ extension CategoriesViewController : UICollectionViewDelegate , UICollectionView
         }else {
             RoundedCollection.simpleView(view: cell.contentView)
         }
-        cell.categoriesImage.sd_setImage(with: URL(string: categories?.catrgories?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "logo GoAhead"))
+        cell.categoriesImage.sd_setImage(with: URL(string: categories?.catrgories?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "appIcon1"))
         cell.categoriesName.text = categories?.catrgories?[cellIndex].name
         
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(identifier: "SubCategoriesViewController") as! SubCategoriesViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SubCategoriesViewController") as! SubCategoriesViewController
         vc.idCategory = categories?.catrgories?[indexPath.item].id
         vc.titleCategory = categories?.catrgories?[indexPath.item].name
         vc.modalPresentationStyle = .fullScreen

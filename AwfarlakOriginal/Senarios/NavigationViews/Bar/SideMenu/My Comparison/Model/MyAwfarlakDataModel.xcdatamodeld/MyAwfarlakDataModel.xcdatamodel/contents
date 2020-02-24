@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MyCart" representedClassName="MyCart" syncable="YES" codeGenerationType="class">
+        <attribute name="productfav" attributeType="String"/>
+        <attribute name="productid" attributeType="String"/>
+        <attribute name="productimage" attributeType="String"/>
+        <attribute name="productname" attributeType="String"/>
+        <attribute name="productpriceafter" optional="YES" attributeType="String"/>
+        <attribute name="productpricebefore" optional="YES" attributeType="String"/>
+        <attribute name="productquantity" optional="YES" attributeType="String"/>
+        <attribute name="productrate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="MyComparison" representedClassName=".MyComparison" syncable="YES" codeGenerationType="class">
+        <attribute name="productfav" attributeType="String"/>
+        <attribute name="productid" attributeType="String"/>
+        <attribute name="productimage" attributeType="String"/>
+        <attribute name="productname" attributeType="String"/>
+        <attribute name="productprice" attributeType="String"/>
+        <attribute name="productrate" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="MyComparison" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="MyCart" positionX="-63" positionY="27" width="128" height="163"/>
+    </elements>
+</model>

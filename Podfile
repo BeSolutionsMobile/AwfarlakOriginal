@@ -16,9 +16,10 @@ target 'AwfarlakOriginal' do
   pod 'MOLH'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage'
-
-
   pod 'Alamofire'
+  pod 'IQKeyboardManager'
+  pod 'NVActivityIndicatorView'
+
 
 
 

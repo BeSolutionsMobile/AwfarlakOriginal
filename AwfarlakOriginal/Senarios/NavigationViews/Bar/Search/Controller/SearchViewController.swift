@@ -9,8 +9,21 @@
 import UIKit
 import BEMCheckBox
 
+//MARK: - Insert New Protocal Named SearchProductDelegate
+
+protocol SearchProductDelegate {
+    func transferResultProduct( text : String)
+}
+
+
 class SearchViewController: UIViewController {
     
+    //MARK: - Variables
+
+    var d : SearchProductDelegate?
+
+    //MARK: - IBOutlet
+
     @IBOutlet weak var bigView: UIView!
     @IBOutlet weak var popupView: UIView!{
         didSet{
@@ -18,10 +31,11 @@ class SearchViewController: UIViewController {
             popupView.clipsToBounds = true
         }
     }
-    @IBOutlet weak var catChk: BEMCheckBox!
-    @IBOutlet weak var productChk: BEMCheckBox!
     @IBOutlet weak var searchBarTf: DesignableUITextField!
     @IBOutlet weak var searchBtn: CusstomButton!
+    
+    //MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tabToClosePopup))
@@ -35,9 +49,11 @@ class SearchViewController: UIViewController {
     }
     
     
-    @IBAction func chkSearchFliter(_ sender: BEMCheckBox) {
-    }
-    
+    //MARK: - IBOutlet
+
     @IBAction func searchBtnPressed(_ sender: UIButton) {
+        d?.transferResultProduct(text: searchBarTf.text ?? "")
+        dismiss(animated: true, completion: nil)
+        
     }
 }

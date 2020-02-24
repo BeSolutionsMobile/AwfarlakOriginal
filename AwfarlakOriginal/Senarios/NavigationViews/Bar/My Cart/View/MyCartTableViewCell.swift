@@ -8,10 +8,27 @@
 
 import UIKit
 import Cosmos
-class MyCartTableViewCell: UITableViewCell {
-    var delegate: FavAnimationDelegate?
 
+//MARK: - Insert New Protocal Named UpdateCart
+
+protocol UpdateCart {
+    func update(countText : String , index : Int)
+     func delete( index : Int)
+    
+}
+class MyCartTableViewCell: UITableViewCell {
+    
+    
+    //MARK: - Variables
+       
+    var index : IndexPath?
+    var delegate: UpdateCart?
     var quantity : Int = 1
+   
+    
+    
+    //MARK: - IBOutlet
+
     @IBOutlet weak var cornerView: UIView!{
         didSet{
             cornerView.layer.cornerRadius = 20
@@ -29,7 +46,7 @@ class MyCartTableViewCell: UITableViewCell {
     @IBOutlet weak var productCount: UILabel!
     @IBOutlet weak var favBtn: UIButton!{
         didSet{
-            favBtn.setImage(UIImage(named: "Fav1"), for: .normal)
+            favBtn.isEnabled = false
         }
     }
     
@@ -52,36 +69,32 @@ class MyCartTableViewCell: UITableViewCell {
     }
     
     
+    //MARK: - IBAction
+    
     @IBAction func minusBtnPressed(_ sender: UIButton) {
         if quantity == 1 {
             productCount.text = String(quantity)
+           delegate?.update(countText: productCount.text!, index: index!.row)
         }else {
             quantity = quantity - 1
             productCount.text = String(quantity)
+            delegate?.update(countText: productCount.text!, index: index!.row)
+           
         }
     }
     
     @IBAction func plusBtnPressed(_ sender: UIButton) {
         quantity = quantity + 1
         productCount.text = String(quantity)
+        delegate?.update(countText: productCount.text!, index: index!.row)
+
     }
     
     @IBAction func deleteBtnPressed(_ sender: UIButton) {
-    }
-    @IBAction func comparisonBtnPressed(_ sender: UIButton) {
+        delegate?.delete(index: index!.row)
     }
     
-    @IBAction func favBtnPressed(_ sender: UIButton) {
-        if favBtn.image(for: .normal) == UIImage(named: "Fav1") {
-            self.favBtn.setImage(UIImage(named: "Fav2"), for: .normal)
-            delegate?.startFavAnimation()
-
-            
-        }
-        else if favBtn.image(for: .normal) == UIImage(named: "Fav2") {
-            self.favBtn.setImage(UIImage(named: "Fav1"), for: .normal)
-            
-        }
-    }
+    
+    
     
 }

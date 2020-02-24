@@ -107,29 +107,24 @@ class AwfarlakSideMenuViewController: UIViewController {
         }
     }
 
-    //MARK: - IBOutlet
+    //MARK: - IBAction
 
     @IBAction func selectFromMenuBtnPressed(_ sender: UIButton) {
-        guard let vc = storyboard?.instantiateViewController(identifier: menuItem.controller1[sender.tag - 1] ) else { return  }
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: menuItem.controller1[sender.tag - 1] ) else { return  }
                self.navigationController?.pushViewController(vc, animated: false)
     }
     @IBAction func logOutBtnPresssed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+        UserDefault.setcheckLogin(false)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
     }
     
     @IBAction func changeLangBtnPressed(_ sender: UIButton) {
-        
         MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-        if #available(iOS 13.0, *) {
-                let delegate = UIApplication.shared.delegate as? AppDelegate
-                delegate!.swichRoot()
-        } else {
-               // Fallback on earlier versions
-               MOLH.reset()
-        }
+              MOLH.reset()
+        
     }
     
 }

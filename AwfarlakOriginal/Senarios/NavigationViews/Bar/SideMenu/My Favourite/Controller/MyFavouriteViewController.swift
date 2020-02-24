@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class MyFavouriteViewController: UIViewController {
+class MyFavouriteViewController: UIViewController  , NVActivityIndicatorViewable{
     
     //MARK: - Variables
     
@@ -23,29 +24,40 @@ class MyFavouriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
-        getFavoriteProduct()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        showAndBacNavigation()
+        getFavoriteProduct()
     }
     
     //MARK: - Func to Get  Favorite Product
     
     func getFavoriteProduct()  {
+        self.startAnimating()
         Services.getFavoriteProduct(idUser: UserDefault.getId(), callback: { (result) in
             print(result)
             switch result.status {
             case 1:
                 self.favoriteProducts = result
                 self.myFavouriteCollectionView.reloadData()
+                self.stopAnimating()
             case 2:
                 Alert.show("Error".localized, massege: result.message!, context: self)
+                self.stopAnimating()
             case 3:
                 RoundedCollection.emptyData(collectionView: self.myFavouriteCollectionView, View: self.view, MessageText: result.message!)
+                self.stopAnimating()
             default:
                 print(result.status)
+                self.stopAnimating()
             }
         }) { (error) in
             print(error.localizedDescription)
+            self.stopAnimating()
         }
         
     }
@@ -69,13 +81,14 @@ extension MyFavouriteViewController : UICollectionViewDelegate , UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyFavouriteCollectionViewCell", for: indexPath) as! MyFavouriteCollectionViewCell
         cell.contentView.layer.cornerRadius = 25
         let cellIndex = indexPath.item
-        cell.productFavImage.sd_setImage(with: URL(string: favoriteProducts?.products?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "logo GoAhead"))
+        cell.productFavImage.sd_setImage(with: URL(string: favoriteProducts?.products?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "appIcon1"))
         cell.productFavName.text = favoriteProducts?.products?[cellIndex].title
         cell.productFavPrice.text = "Rs.\(favoriteProducts?.products?[cellIndex].priceAfterDiscount ?? "")"
         cell.productFavRate.rating = Double((favoriteProducts?.products?[cellIndex].rating)!)!
         cell.idProduct = favoriteProducts?.products?[cellIndex].id
         cell.delegate = self
-        
+        cell.index = indexPath
+        cell.transferToCartDelegate = self
         return cell
         
     }
@@ -109,3 +122,32 @@ extension MyFavouriteViewController: ReloadCollectionViewFavourite {
     
     
 }
+
+//MARK:-TransferToCartDelegate
+
+extension MyFavouriteViewController : TransferToCartDelegate {
+    func transferCart(index: Int) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddCartPopupViewController") as! AddCartPopupViewController
+        vc.modalPresentationStyle = .overFullScreen
+        vc.idProduct = favoriteProducts?.products?[index].id
+        vc.addToCartAndGo = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+}
+
+//MARK:-AddToCartAndGo
+
+extension MyFavouriteViewController : AddToCartAndGo {
+    func goToCart() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MyCartViewController") as? MyCartViewController {
+            vc.modalPresentationStyle = .fullScreen
+              navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
+    
+   
+}
+    
+

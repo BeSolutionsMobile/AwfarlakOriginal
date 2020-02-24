@@ -207,9 +207,36 @@ class Services {
            }
        }
     
+    // MARK: - Send Order
+
+    class func sendOrder(AllProduct: String, yourName: String,address: String,mobile : String ,idRegion : Int ,payment : Int,idUser: String, callback: @escaping (SendOrder) -> Void, failureHandler: @escaping (Error) -> Void) {
+        let url = URLs.sendOrder
+        let parameters = ["products": AllProduct, "name": yourName ,"address": address,"mobile": mobile, "id_region": idRegion ,"payment": payment, "id_user": idUser ] as [String : Any]
+        Service.request(url: url, dateFormate: nil, method: HTTPMethod.post, parameters: parameters, headers:nil, callBack: { (response: SendOrder) in
+            callback(response)
+        }) { (error) in
+            failureHandler(error)
+        }
+    }
+    
+    // MARK: - Get Search
+
+    class func getSearchResult(searchWord: String ,idUser: String ,callback: @escaping (Search) -> Void, failureHandler: @escaping (Error) -> Void) {
+        let url = "\(URLs.search)/\(searchWord)/\(idUser)"
+        Service.request(url: url, dateFormate: nil, method: HTTPMethod.get, parameters: nil, headers:nil, callBack: { (response: Search) in
+            callback(response)
+        }) { (error) in
+            failureHandler(error)
+        }
+    }
+    
     
     
 }
+
+
+
+
 
 
 

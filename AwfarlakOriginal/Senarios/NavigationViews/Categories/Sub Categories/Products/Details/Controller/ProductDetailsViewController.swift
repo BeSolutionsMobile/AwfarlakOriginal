@@ -9,8 +9,9 @@
 import UIKit
 import ImageSlideshow
 import MOLH
+import NVActivityIndicatorView
 
-class ProductDetailsViewController: UIViewController {
+class ProductDetailsViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK: - Variables
     
@@ -53,24 +54,34 @@ class ProductDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        showAndBacNavigation()
+    }
+    
     
     //MARK: - Func to Get Product Details
     
     func getProductDetails()  {
         if let idProduct = ProductDetailsViewController.idProduct {
+            self.startAnimating()
             Services.getProductDetails(idProduct: idProduct, callback: { (result) in
                 print(result)
                 switch result.status {
                 case 1:
                     self.productDetails = result
                     self.completeData()
+                    self.stopAnimating()
                 case 2:
                     Alert.show("Error".localized, massege: result.message!, context: self)
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
     }
@@ -144,7 +155,7 @@ class ProductDetailsViewController: UIViewController {
         imageSilder.pageIndicator = pageControl
         imageSilder.activityIndicator = DefaultActivityIndicator()
         imageSilder.activityIndicator = DefaultActivityIndicator()
-        imageSilder.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
+        imageSilder.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
         imageSilder.addGestureRecognizer(recognizer)
     }
@@ -153,7 +164,7 @@ class ProductDetailsViewController: UIViewController {
     
     @objc func didTap() {
         let fullScreenController = productImageSilder.presentFullScreenController(from: self)
-        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
     
     //MARK:- Customize Segmant Controller
@@ -220,7 +231,7 @@ class ProductDetailsViewController: UIViewController {
     
     
     @IBAction func addRateBtnPressed(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(identifier: "AddRateViewController") as! AddRateViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddRateViewController") as! AddRateViewController
         vc.idProduct = ProductDetailsViewController.idProduct
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
@@ -229,17 +240,34 @@ class ProductDetailsViewController: UIViewController {
     
     
     @IBAction func callBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "ContactUsViewController") as? ContactUsViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ContactUsViewController") as? ContactUsViewController {
             vc.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func addCartBtnPressed(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(identifier: "AddCartPopupViewController") as! AddCartPopupViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddCartPopupViewController") as! AddCartPopupViewController
+        vc.idProduct = ProductDetailsViewController.idProduct
         vc.modalPresentationStyle = .overFullScreen
+        vc.addToCartAndGo = self
         self.present(vc, animated: true, completion: nil)
     }
     
     
 }
+
+//MARK:-AddToCartAndGo
+
+extension ProductDetailsViewController : AddToCartAndGo {
+    func goToCart() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MyCartViewController") as? MyCartViewController {
+            vc.modalPresentationStyle = .fullScreen
+              navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
+    
+   
+}
+    

@@ -55,7 +55,6 @@
 "Profile3" = "Phone Number must be 11 Numbers";
 "Profile4" = "He Data Was Successfully Updated";
 
-
 // MARK: - Change Password
 
 "ChangePass1" = "Old Password is at Least 6 Characters Long";
@@ -64,6 +63,21 @@
 "ChangePass4" = "The Two Passwords must Match";
 "ChangePass5" = "Password successfully changed";
 "ChangePass6" = "All Fields Are Required";
+
+// MARK: -  My Comparison
+
+"MyComparison1" = "Cannot Add More Than Two Products";
+"MyComparison2" = "The Product Has been Added to My Comparison";
+"MyComparison3" = "There Are No Comparisons";
+"MyComparison4" = "The Comparison Was Completed Successfully";
+
+// MARK: -  My Cart
+
+"MyCart1" = "The Product Was Added to the Cart Successfully";
+"MyCart2" = "There Are No Products";
+"MyCart3" = "There Are No Comparisons";
+"MyCart4" = "The Comparison Was Completed Successfully";
+
 
 
 

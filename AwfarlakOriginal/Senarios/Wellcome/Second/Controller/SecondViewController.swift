@@ -75,11 +75,11 @@ class SecondViewController: UIViewController {
     @objc func swipeAction(_ sender: UISwipeGestureRecognizer){
         if sender.direction == .right {
             if MOLHLanguage.currentAppleLanguage() == "en"{
-                let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
+                let vc = storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
                 vc.modalPresentationStyle = .fullScreen
                 presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromRight)            }
             else if  MOLHLanguage.currentAppleLanguage() == "ar"{
-                let vc = storyboard?.instantiateViewController(identifier: "FristViewController") as! FristViewController
+                let vc = storyboard?.instantiateViewController(withIdentifier: "FristViewController") as! FristViewController
                 vc.modalPresentationStyle = .fullScreen
                 presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromRight)
                 
@@ -89,11 +89,11 @@ class SecondViewController: UIViewController {
             
         } else if sender.direction == .left {
             if MOLHLanguage.currentAppleLanguage() == "en"{
-                let vc = storyboard?.instantiateViewController(identifier: "FristViewController") as! FristViewController
+                let vc = storyboard?.instantiateViewController(withIdentifier: "FristViewController") as! FristViewController
                 vc.modalPresentationStyle = .fullScreen
                 presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromLeft)                   }
             else if  MOLHLanguage.currentAppleLanguage() == "ar"{
-                let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as! ThirdViewController
+                let vc = storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
                 vc.modalPresentationStyle = .fullScreen
                 presentViewControllerWithTransition(viewController: vc, animated: true, direction: .fromLeft)                   }
             
@@ -128,14 +128,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "ThirdViewController") as? ThirdViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as? ThirdViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
     }
     
     @IBAction func skipBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "AwfarlakViewController") as? AwfarlakViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AwfarlakViewController") as? AwfarlakViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

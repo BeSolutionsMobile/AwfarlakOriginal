@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041E0ECE23DEF2840034CE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0ECD23DEF2840034CE0F /* AppDelegate.swift */; };
-		041E0ED023DEF2840034CE0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0ECF23DEF2840034CE0F /* SceneDelegate.swift */; };
 		041E0ED223DEF2840034CE0F /* AwfarlakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0ED123DEF2840034CE0F /* AwfarlakViewController.swift */; };
 		041E0ED523DEF2840034CE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E0ED323DEF2840034CE0F /* Main.storyboard */; };
 		041E0ED723DEF2870034CE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041E0ED623DEF2870034CE0F /* Assets.xcassets */; };
@@ -26,6 +24,9 @@
 		3B11F0EC23E2FDDE003FB6B0 /* Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */; };
 		3B12974524027EEA0041BD7C /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12974424027EEA0041BD7C /* ChangePassword.swift */; };
 		3B129748240288710041BD7C /* FaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129747240288710041BD7C /* FaQuestion.swift */; };
+		3B12974A24029C920041BD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12974924029C920041BD7C /* AppDelegate.swift */; };
+		3B12974E2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B12974C2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodeld */; };
+		3B1297512402AB950041BD7C /* SharedCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1297502402AB950041BD7C /* SharedCoreData.swift */; };
 		3B12A5E7240019B60075C1D3 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12A5E6240019B60075C1D3 /* ProductDetails.swift */; };
 		3B12FEF523E04A4E00C7A75D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */; };
 		3B13C3C723FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13C3C623FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift */; };
@@ -58,6 +59,8 @@
 		3B1A646523EDF55C00533F0F /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A646723EDF55C00533F0F /* SearchStoryboard.storyboard */; };
 		3B1A646A23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A646C23EDF62200533F0F /* AboutAwfalakStoryboard.storyboard */; };
 		3B1A646F23EE085800533F0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B1A647123EE085800533F0F /* Localizable.strings */; };
+		3B1A64942403E705005E1AF7 /* SendOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A64932403E705005E1AF7 /* SendOrder.swift */; };
+		3B1A64972403FD1F005E1AF7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A64962403FD1F005E1AF7 /* Search.swift */; };
 		3B1C310723E4918500C14138 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310623E4918500C14138 /* ProductsViewController.swift */; };
 		3B1C310923E491B000C14138 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */; };
 		3B1C310D23E4C4EA00C14138 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */; };
@@ -122,8 +125,6 @@
 
 /* Begin PBXFileReference section */
 		041E0ECA23DEF2840034CE0F /* Awfarlak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awfarlak.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		041E0ECD23DEF2840034CE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		041E0ECF23DEF2840034CE0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		041E0ED123DEF2840034CE0F /* AwfarlakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwfarlakViewController.swift; sourceTree = "<group>"; };
 		041E0ED623DEF2870034CE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041E0ED923DEF2870034CE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,6 +146,9 @@
 		3B11F0EB23E2FDDE003FB6B0 /* Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounded.swift; sourceTree = "<group>"; };
 		3B12974424027EEA0041BD7C /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		3B129747240288710041BD7C /* FaQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaQuestion.swift; sourceTree = "<group>"; };
+		3B12974924029C920041BD7C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B12974D2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAwfarlakDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3B1297502402AB950041BD7C /* SharedCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCoreData.swift; sourceTree = "<group>"; };
 		3B12A5E6240019B60075C1D3 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		3B12FEF423E04A4E00C7A75D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3B13C3C623FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAndDeleteFavoriteProduct.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		3B1A646E23EDF62E00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AboutAwfalakStoryboard.strings; sourceTree = "<group>"; };
 		3B1A647023EE085800533F0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B1A647223EE085D00533F0F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B1A64932403E705005E1AF7 /* SendOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOrder.swift; sourceTree = "<group>"; };
+		3B1A64962403FD1F005E1AF7 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		3B1C310623E4918500C14138 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		3B1C310823E491B000C14138 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B1C310C23E4C4EA00C14138 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 		041E0ECC23DEF2840034CE0F /* AwfarlakOriginal */ = {
 			isa = PBXGroup;
 			children = (
+				3B12974F2402AB780041BD7C /* SharedCoreData */,
 				3B6FD38523F9985F003F0056 /* Network Layer */,
 				3B1A644823EDDE1300533F0F /* Localizable */,
 				3BDB047423E33D100052FCDD /* Core */,
@@ -344,6 +351,7 @@
 		3B0DEA9023E9BBA400250EE2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				3B1A64952403FD10005E1AF7 /* Model */,
 				3B0DEA9123E9BBAC00250EE2 /* Controller */,
 			);
 			path = Search;
@@ -444,6 +452,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3B12974B2402A6540041BD7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B12974C2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B12974F2402AB780041BD7C /* SharedCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3B1297502402AB950041BD7C /* SharedCoreData.swift */,
+			);
+			path = SharedCoreData;
+			sourceTree = "<group>";
+		};
 		3B12A5E5240019A50075C1D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +536,7 @@
 		3B13E69D23E5F76200D797AA /* My Cart */ = {
 			isa = PBXGroup;
 			children = (
+				3B1A64922403E6F3005E1AF7 /* Model */,
 				3B176EC123E6F20000C89661 /* View */,
 				3B13E6A123E5F79D00D797AA /* Controller */,
 				3B148B8123EAC84900839538 /*  OrderSuccessful */,
@@ -556,6 +581,7 @@
 		3B13E6A823E5FCFE00D797AA /* My Comparison */ = {
 			isa = PBXGroup;
 			children = (
+				3B12974B2402A6540041BD7C /* Model */,
 				3B1C5BEE23E82A84008DBA3B /* View */,
 				3B13E6A923E5FD1500D797AA /* Controller */,
 			);
@@ -715,6 +741,22 @@
 				3B1A647123EE085800533F0F /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		3B1A64922403E6F3005E1AF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B1A64932403E705005E1AF7 /* SendOrder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B1A64952403FD10005E1AF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B1A64962403FD1F005E1AF7 /* Search.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B1C310323E4915400C14138 /* Products */ = {
@@ -1071,8 +1113,7 @@
 		3BDB047423E33D100052FCDD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				041E0ECD23DEF2840034CE0F /* AppDelegate.swift */,
-				041E0ECF23DEF2840034CE0F /* SceneDelegate.swift */,
+				3B12974924029C920041BD7C /* AppDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1314,12 +1355,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1A64942403E705005E1AF7 /* SendOrder.swift in Sources */,
 				3B6FD38B23F99860003F0056 /* URLs .swift in Sources */,
 				3B1EA5872401511A00033F69 /* AddRateToProduct.swift in Sources */,
 				3B140E7823FBF76000A89CB0 /* Categories.swift in Sources */,
 				3BC8FDFD23EB1ADE0083C284 /* TitleOfSectionTableViewCell.swift in Sources */,
 				3B1C5BF423E854D8008DBA3B /* CommentsSegmentedViewController.swift in Sources */,
 				3B148B9323EAF09000839538 /* AboutUsViewController.swift in Sources */,
+				3B12974E2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodeld in Sources */,
 				3B2ED3E723EC4CE800AE2801 /* SecondViewController.swift in Sources */,
 				3B12A5E7240019B60075C1D3 /* ProductDetails.swift in Sources */,
 				3B98C2C523FB19D60012A627 /* ForgetPassword.swift in Sources */,
@@ -1331,8 +1374,8 @@
 				041E0ED223DEF2840034CE0F /* AwfarlakViewController.swift in Sources */,
 				3B1C5BF223E854BC008DBA3B /* DetailsSegmentedViewController.swift in Sources */,
 				3B1C310D23E4C4EA00C14138 /* ProductDetailsViewController.swift in Sources */,
+				3B1A64972403FD1F005E1AF7 /* Search.swift in Sources */,
 				3B11F0E823E2EC02003FB6B0 /* CategoriesCollectionViewCell.swift in Sources */,
-				041E0ECE23DEF2840034CE0F /* AppDelegate.swift in Sources */,
 				3B140E8023FC297800A89CB0 /* SubCategoriesCollectionViewCell.swift in Sources */,
 				3B13E6A323E5F7B800D797AA /* ProfileViewController.swift in Sources */,
 				3B148B8F23EAF06400839538 /* FAQViewController.swift in Sources */,
@@ -1358,8 +1401,10 @@
 				3B0DFF5B24019EB200F78976 /* AddComments.swift in Sources */,
 				3B13E69223E5AFAD00D797AA /* ConstantMenu.swift in Sources */,
 				3BA9634823FD9646001FDC9C /* Products.swift in Sources */,
+				3B1297512402AB950041BD7C /* SharedCoreData.swift in Sources */,
 				3B0DEA9523E9C71A00250EE2 /* SearchViewController.swift in Sources */,
 				3B148B8423EAC8FD00839538 /* OrderSuccessfulViewController.swift in Sources */,
+				3B12974A24029C920041BD7C /* AppDelegate.swift in Sources */,
 				3B0DFF642401C62D00F78976 /* ViewProfile.swift in Sources */,
 				3B21697A23DF2689008D4920 /* MainNavigationController.swift in Sources */,
 				3B148B8023EABF7400839538 /* MyFavouriteCollectionViewCell.swift in Sources */,
@@ -1367,7 +1412,6 @@
 				3B13C3C723FED35500379CB0 /* AddAndDeleteFavoriteProduct.swift in Sources */,
 				3B6FD38A23F99860003F0056 /* Services.swift in Sources */,
 				3B148B9A23EAF0E800839538 /* ContactUsViewController.swift in Sources */,
-				041E0ED023DEF2840034CE0F /* SceneDelegate.swift in Sources */,
 				3B20D0A423EC1EFC00734C6D /* FristViewController.swift in Sources */,
 				3B6FD38923F99860003F0056 /* Request.swift in Sources */,
 				3BDB047223E334CC0052FCDD /* ForgotPasswordViewController.swift in Sources */,
@@ -1628,11 +1672,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KA6LDR462G;
 				INFOPLIST_FILE = AwfarlakOriginal/Configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.Awfarlak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Be.Solutions.OfferllakApp;
 				PRODUCT_NAME = Awfarlak;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1647,11 +1692,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KA6LDR462G;
 				INFOPLIST_FILE = AwfarlakOriginal/Configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amirahmed.Awfarlak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Be.Solutions.OfferllakApp;
 				PRODUCT_NAME = Awfarlak;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1782,6 +1828,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B12974C2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B12974D2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodel */,
+			);
+			currentVersion = 3B12974D2402A6930041BD7C /* MyAwfarlakDataModel.xcdatamodel */;
+			path = MyAwfarlakDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 041E0EC223DEF2840034CE0F /* Project object */;
 }

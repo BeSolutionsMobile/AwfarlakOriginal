@@ -15,12 +15,18 @@ import MOLH
 protocol FavAnimationDelegate {
     func startFavAnimation()
 }
+protocol AddInComparison {
+     func setDataInCoreData( index : Int)
+}
 
 class ProductsCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Variables
     
     var delegate: FavAnimationDelegate?
+    var delegateComparison: AddInComparison?
+     var index : IndexPath?
+    var transferToCartDelegate : TransferToCartDelegate?
     var idProduct : String?
     
     //MARK: - IBOutlet
@@ -107,6 +113,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     
     
     @IBAction func comparisonBtnPressed(_ sender: UIButton) {
+        delegateComparison?.setDataInCoreData(index: index!.item)
     }
     
     @IBAction func favBtnPressed(_ sender: UIButton) {
@@ -121,6 +128,8 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addToCartBtnPressed(_ sender: UIButton) {
+        transferToCartDelegate?.transferCart(index: index!.item)
+        
     }
     
     

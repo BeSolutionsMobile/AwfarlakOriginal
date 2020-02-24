@@ -8,15 +8,16 @@
 
 import UIKit
 import SDWebImage
+import NVActivityIndicatorView
 
-class SubCategoriesViewController: UIViewController {
-
+class SubCategoriesViewController: UIViewController , NVActivityIndicatorViewable{
+    
     //MARK: - Variables
     
     var subCategories : SubCategories?
     var idCategory : String?
     var titleCategory : String?
-
+    
     //MARK: - IBOutlet
     
     @IBOutlet weak var subCategoriesCollectionView: UICollectionView!
@@ -30,8 +31,13 @@ class SubCategoriesViewController: UIViewController {
         getSubCategories()
     }
     
+     override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(true)
+           showAndBacNavigation()
+       }
+    
     //MARK: - Func to Update Design
-       
+    
     func updateDesign()  {
         if let titleCategory = titleCategory {
             title =  titleCategory
@@ -42,27 +48,33 @@ class SubCategoriesViewController: UIViewController {
     
     func getSubCategories()  {
         if let idCategory = idCategory {
+            self.startAnimating()
             Services.getSubCategories(idCategory: idCategory, callback: { (result) in
-                 print(result)
-                 switch result.status {
-                 case 1:
-                     self.subCategories = result
-                     self.subCategoriesCollectionView.reloadData()
-                 case 2:
-                     Alert.show("Error".localized, massege: result.message!, context: self)
-                 case 3:
-                     RoundedCollection.emptyData(collectionView: self.subCategoriesCollectionView, View: self.view, MessageText: result.message!)
-                 default:
-                     print(result.status)
-                 }
-             }) { (error) in
-                 print(error.localizedDescription)
-             }
+                print(result)
+                switch result.status {
+                case 1:
+                    self.subCategories = result
+                    self.subCategoriesCollectionView.reloadData()
+                    self.stopAnimating()
+                case 2:
+                    Alert.show("Error".localized, massege: result.message!, context: self)
+                    self.stopAnimating()
+                case 3:
+                    RoundedCollection.emptyData(collectionView: self.subCategoriesCollectionView, View: self.view, MessageText: result.message!)
+                    self.stopAnimating()
+                default:
+                    print(result.status)
+                    self.stopAnimating()
+                }
+            }) { (error) in
+                print(error.localizedDescription)
+                self.stopAnimating()
+            }
         }
     }
-
     
-
+    
+    
 }
 
 //MARK: - Extension
@@ -91,14 +103,14 @@ extension SubCategoriesViewController : UICollectionViewDelegate , UICollectionV
         }else {
             RoundedCollection.simpleView(view: cell.contentView)
         }
-        cell.subCategoriesImage.sd_setImage(with: URL(string: subCategories?.catrgories?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "logo GoAhead"))
+        cell.subCategoriesImage.sd_setImage(with: URL(string: subCategories?.catrgories?[cellIndex].image ?? ""), placeholderImage: UIImage(named: "appIcon1"))
         cell.subCategoriesName.text = subCategories?.catrgories?[cellIndex].name
         
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(identifier: "ProductsViewController") as! ProductsViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
         vc.idSubCategory = subCategories?.catrgories?[indexPath.item].id
         vc.titleSubCategory = subCategories?.catrgories?[indexPath.item].name
         vc.modalPresentationStyle = .fullScreen

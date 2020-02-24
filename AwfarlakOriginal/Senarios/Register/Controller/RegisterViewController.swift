@@ -8,7 +8,8 @@
 
 import UIKit
 import BEMCheckBox
-class RegisterViewController: UIViewController {
+import NVActivityIndicatorView
+class RegisterViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK: - IBOutlet
     
@@ -74,18 +75,23 @@ class RegisterViewController: UIViewController {
     
     func getRegister()  {
         if validateRegister(){
+            self.startAnimating()
             Services.register(name: fullNameTf.text! , mail: emailTf.text!, phone: phoneTf.text!, password: passwordTf.text!, callback: { (result) in
                 print(result)
                 switch result.status {
                 case 1:
+                    self.stopAnimating()
                     self.getLogin()
                 case 2:
+                    self.stopAnimating()
                     Alert.show("Error".localized, massege: result.message, context: self)
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
     }
@@ -173,6 +179,7 @@ class RegisterViewController: UIViewController {
         UserDefault.setName((self.login?.userData?.name)!)
         UserDefault.setEmail((self.login?.userData?.mail)!)
         UserDefault.setPhone((self.login?.userData?.phone)!)
+        UserDefault.setcheckLogin(true)
     }
     
     //MARK: - Func to Empty TextFaild
@@ -193,7 +200,7 @@ class RegisterViewController: UIViewController {
         view.play { (finished) in
             if finished {
                 self.animationRegister.isHidden = true
-                if let vc = self.storyboard?.instantiateViewController(identifier: "MainNavigationController") as? MainNavigationController {
+                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController {
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: true, completion: nil)
                 }
@@ -223,7 +230,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func goToLoginBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

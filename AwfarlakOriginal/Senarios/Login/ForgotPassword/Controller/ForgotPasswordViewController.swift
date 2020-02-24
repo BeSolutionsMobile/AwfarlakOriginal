@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ForgotPasswordViewController: UIViewController {
+import NVActivityIndicatorView
+class ForgotPasswordViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK: - IBOutlet
 
@@ -42,6 +42,7 @@ class ForgotPasswordViewController: UIViewController {
     //MARK: - Func to Forgot Password
     
     func getForgotPassword(){
+        self.startAnimating()
         if validateForgotPasswordTfEmpty(){
             Services.forgetPassword(email: emailTf.text!, callback: { (result) in
                 print(result)
@@ -49,14 +50,18 @@ class ForgotPasswordViewController: UIViewController {
                 case 1:
                     self.clearText()
                     self.CusstomAlert()
+                    self.stopAnimating()
                 case 2:
                     CustomDesign.validateNotDone(textField: self.emailTf, numberOfShakes: 3, revert: true)
                     Alert.show("Error".localized, massege: "ForgetPasswordMsg4".localized, context: self)
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
     }
@@ -74,7 +79,7 @@ class ForgotPasswordViewController: UIViewController {
    //MARK: - Func to Handler Action in Cussstom Alert
 
     func loginHandler(alert:UIAlertAction!){
-        if let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

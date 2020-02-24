@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController  , NVActivityIndicatorViewable{
     
     //MARK: - IBOutlet
     
@@ -70,6 +71,12 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
+    override func viewDidAppear(_ animated: Bool) {
+          super.viewDidAppear(true)
+          showAndBacNavigation()
+      }
+    
     //MARK: - Func to  Update Design
     
     func updateViewDesign() {
@@ -83,19 +90,24 @@ class ProfileViewController: UIViewController {
     
     func getEditProfile()  {
         if validateProfile() {
+            self.startAnimating()
             Services.editProfile(name: fullNameTf.text!, email: emailTf.text!, phone: phoneTf.text!, idUser: UserDefault.getId(), callback: { (result) in
                 print(result)
                 switch result.status {
                 case 1:
                     self.editProfile = result
                     Alert.show("Success".localized, massege: "Profile4".localized, context: self)
+                    self.stopAnimating()
                 case 2:
                     Alert.show("Error".localized, massege: result.message, context: self)
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
         
@@ -104,19 +116,24 @@ class ProfileViewController: UIViewController {
     //MARK: - Func to Get Data Profile
        
        func getDataProfile()  {
+        self.startAnimating()
         Services.getDataOfUser(idUser: UserDefault.getId(), callback: { (result) in
                    print(result)
                    switch result.status {
                    case 1:
                        self.viewProfile = result
                        self.getData()
+                    self.stopAnimating()
                    case 2:
                     Alert.show("Error".localized, massege: result.message!, context: self)
+                    self.stopAnimating()
                    default:
                        print(result.status)
+                    self.stopAnimating()
                    }
                }) { (error) in
                    print(error.localizedDescription)
+                self.stopAnimating()
                }
            
        }
@@ -177,7 +194,7 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func changePassordBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "ChangePasswordViewController") as? ChangePasswordViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController {
             vc.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(vc, animated: true)
         }

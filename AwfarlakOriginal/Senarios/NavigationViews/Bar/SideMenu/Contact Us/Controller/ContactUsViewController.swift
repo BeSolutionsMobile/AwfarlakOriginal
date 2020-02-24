@@ -13,17 +13,21 @@ class ContactUsViewController: UIViewController {
     var contactIcon = ["ContactPhone" , "Contactemail" , "Contacthome"]
     var contactTitle = ["contectPhone".localized , "contectEmail".localized , "contectAddress".localized]
     var contactData = ["01008182062 - 01024439000 - 01004646198" , "Info@aufarleky1.com" , "contectAddressDet".localized]
-
-
+    
+    
     @IBOutlet weak var contactUsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         showAndBacNavigation()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        showAndBacNavigation()
+    }
+    
 }
 
 
@@ -45,10 +49,10 @@ extension ContactUsViewController : UITableViewDelegate , UITableViewDataSource 
     
     
     //MARK:- didSelectRowAt
-      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-          
-      }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
     
     
     

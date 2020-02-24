@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK: - IBOutlet
     
@@ -62,6 +63,7 @@ class LoginViewController: UIViewController {
     //MARK: - Func to Login
     
     func getLogin(){
+        self.startAnimating()
         if validateLoginTfEmpty() {
             Services.login(email: loginEmailTf.text!, password: loginPasswordTf.text!, callback: { (result) in
                 print(result)
@@ -71,13 +73,17 @@ class LoginViewController: UIViewController {
                     self.clearText()
                     self.setData()
                     self.startAnimation()
+                    self.stopAnimating()
                 case 2:
                     self.incorrectEmailOrPassword()
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
         
@@ -118,6 +124,7 @@ class LoginViewController: UIViewController {
         UserDefault.setName((self.login?.userData?.name)!)
         UserDefault.setEmail((self.login?.userData?.mail)!)
         UserDefault.setPhone((self.login?.userData?.phone)!)
+        UserDefault.setcheckLogin(true)
     }
  
     
@@ -136,7 +143,7 @@ class LoginViewController: UIViewController {
         view.play { (finished) in
             if finished {
                 self.loginAnimation.isHidden = true
-                if let vc = self.storyboard?.instantiateViewController(identifier: "MainNavigationController") as? MainNavigationController {
+                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController {
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: true, completion: nil)
                 }
@@ -157,14 +164,14 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
     }
     
     @IBAction func dontHaveAccountBtnPressed(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "RegisterViewController") as? RegisterViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

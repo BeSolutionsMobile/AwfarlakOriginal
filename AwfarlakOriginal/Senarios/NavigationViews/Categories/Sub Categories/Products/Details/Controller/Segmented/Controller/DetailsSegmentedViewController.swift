@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class DetailsSegmentedViewController: UIViewController {
+class DetailsSegmentedViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK: - Variables
     
@@ -31,19 +32,24 @@ class DetailsSegmentedViewController: UIViewController {
     
     func getProductDescription()  {
         if let idProduct = ProductDetailsViewController.idProduct {
+            self.startAnimating()
             Services.getProductDetails(idProduct: idProduct, callback: { (result) in
                 print(result)
                 switch result.status {
                 case 1:
                     self.productDetails = result
                     self.productData.text = self.productDetails?.productDetailsDescription
+                    self.stopAnimating()
                 case 2:
                     Alert.show("Error".localized, massege: result.message!, context: self)
+                    self.stopAnimating()
                 default:
                     print(result.status)
+                    self.stopAnimating()
                 }
             }) { (error) in
                 print(error.localizedDescription)
+                self.stopAnimating()
             }
         }
     }

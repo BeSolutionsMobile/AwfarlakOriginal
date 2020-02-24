@@ -9,14 +9,13 @@
 import UIKit
 import SideMenu
 import MOLH
+import CoreData
+
 class MainNavigationController: UINavigationController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-    
 }
 
 extension UIViewController {
@@ -31,8 +30,9 @@ extension UIViewController {
         cartButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
         cartButton.tintColor = UIColor.white
         cartButton.addTarget(self, action: #selector(cartBtn), for: .touchUpInside)
-       // var number : String = String(3)
-        cartButton.badge = "3"
+        SharedCoreData.loadMyCart()
+        var number : String = String(SharedCoreData.myCartArray.count)
+        cartButton.badge = number
         let search = UIBarButtonItem(title: "", style: .done,target: self, action: #selector(searchBtn))
         search.image = UIImage(named: "search")
         search.tintColor = UIColor.white
@@ -53,14 +53,13 @@ extension UIViewController {
         cartButton.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
         cartButton.tintColor = UIColor.white
         cartButton.addTarget(self, action: #selector(cartBtn), for: .touchUpInside)
-        //var number : String = String(3)
-        cartButton.badge = "3"
+        SharedCoreData.loadMyCart()
+        var number : String = String(SharedCoreData.myCartArray.count)
+        cartButton.badge = number
         let search = UIBarButtonItem(title: "", style: .done,target: self, action: #selector(searchBtn))
         search.image = UIImage(named: "search")
         search.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItems = [menu,UIBarButtonItem(customView: cartButton),search]
-        
-        
         let back = UIBarButtonItem(title: "", style: .done,target: self, action: #selector(backBtn))
         if MOLHLanguage.currentAppleLanguage() == "en"{
                  back.image = UIImage(named: "back")
@@ -77,7 +76,7 @@ extension UIViewController {
     
     
     @objc func menuBtn(){
-            let vc = storyboard?.instantiateViewController(identifier: "SideMenuNavigationController") as! SideMenuNavigationController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SideMenuNavigationController") as! SideMenuNavigationController
             vc.settings = SharedMenu.settings(view: self.view)
             present(vc, animated: true, completion: nil)
 
@@ -88,7 +87,7 @@ extension UIViewController {
     
     
     @objc func cartBtn(){
-                    let vc = storyboard?.instantiateViewController(identifier: "MyCartViewController") as! MyCartViewController
+                    let vc = storyboard?.instantiateViewController(withIdentifier: "MyCartViewController") as! MyCartViewController
                     navigationController?.pushViewController(vc, animated: true)
         
         
@@ -105,14 +104,8 @@ extension UIViewController {
         transition.subtype = CATransitionSubtype.fromBottom
         view.window!.layer.add(transition, forKey: kCATransition)
         screen!.modalPresentationStyle = .overFullScreen
+        screen!.d = self
         self.present(screen!, animated: false, completion: nil)
-        
-        
-//            let vc = storyboard?.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
-//            vc.modalPresentationStyle = .overFullScreen
-//            self.present(vc, animated: true, completion: nil)
-       
-        
     }
     
     @objc func backBtn(){
@@ -133,3 +126,14 @@ extension UIViewController {
 
 
 
+extension UIViewController : SearchProductDelegate {
+    func transferResultProduct(text: String) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
+        vc.sender = 2
+        vc.searchText = text
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+}

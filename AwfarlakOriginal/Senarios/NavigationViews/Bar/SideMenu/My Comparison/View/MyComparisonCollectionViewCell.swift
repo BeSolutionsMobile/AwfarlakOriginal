@@ -8,18 +8,31 @@
 
 import UIKit
 import Cosmos
+
+
+
+//MARK: - Insert New Protocal Named TransferToCartDelegate
+
+protocol TransferToCartDelegate {
+    func transferCart(index : Int)
+}
 class MyComparisonCollectionViewCell: UICollectionViewCell {
-    var delegate: FavAnimationDelegate?
+    
+    //MARK: - Variables
+       
+    var transferToCartDelegate : TransferToCartDelegate?
+    var index : IndexPath?
+    
+    //MARK: - IBOutlet
 
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productRate: CosmosView!
-    @IBOutlet weak var productBuyers: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     
     @IBOutlet weak var addFavBtn: UIButton!{
         didSet{
-            addFavBtn.setImage(UIImage(named: "Fav1"), for: .normal)
+            addFavBtn.isEnabled = false
         }
     }
     
@@ -27,22 +40,13 @@ class MyComparisonCollectionViewCell: UICollectionViewCell {
     
     
     
-    
-    
-    @IBAction func addFavBtnPressed(_ sender: UIButton) {
-        if addFavBtn.image(for: .normal) == UIImage(named: "Fav1") {
-            self.addFavBtn.setImage(UIImage(named: "Fav2"), for: .normal)
-            delegate?.startFavAnimation()
+    //MARK: - IBAction
 
-            
-        }
-        else if addFavBtn.image(for: .normal) == UIImage(named: "Fav2") {
-            self.addFavBtn.setImage(UIImage(named: "Fav1"), for: .normal)
-            
-        }
-    }
+    
     
     @IBAction func addCartBtnPressed(_ sender: UIButton) {
+        transferToCartDelegate?.transferCart(index: index!.item)
+        
     }
     
     
