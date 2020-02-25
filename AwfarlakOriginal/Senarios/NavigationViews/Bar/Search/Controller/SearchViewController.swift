@@ -32,8 +32,8 @@ class SearchViewController: UIViewController {
         }
     }
     @IBOutlet weak var searchBarTf: DesignableUITextField!
-    @IBOutlet weak var searchBtn: CusstomButton!
-    
+    @IBOutlet weak var searchhBtn: CusstomButton!
+    //
     //MARK: - View Life Cycle
 
     override func viewDidLoad() {
