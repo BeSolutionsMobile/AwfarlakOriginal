@@ -18,14 +18,18 @@ struct ProductComments: Codable {
 
 // MARK: - Comment
 struct AllComment: Codable {
-    let id, comment, userName: String
-    let userPhoto: String
-    let date: String
+    let id, idOffer, comment, createdBy: String
+    let lastUpdatedBy, status, deleted, created: String
+    let updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, comment
-        case userName = "user_name"
-        case userPhoto = "user_photo"
-        case date
+        case id
+        case idOffer = "id_offer"
+        case comment
+        case createdBy = "created_by"
+        case lastUpdatedBy = "last_updated_by"
+        case status, deleted, created
+        case updatedAt = "updated_at"
     }
 }
+

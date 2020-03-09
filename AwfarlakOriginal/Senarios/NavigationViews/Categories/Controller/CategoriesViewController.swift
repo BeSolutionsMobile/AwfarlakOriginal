@@ -15,6 +15,7 @@ class CategoriesViewController: UIViewController , NVActivityIndicatorViewable {
     //MARK: - Variables
     
     var categories : Categories?
+    var mainCatrgory : MainCatrgory?
     
     //MARK: - IBOutlet
     
